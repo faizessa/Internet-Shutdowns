@@ -2,11 +2,13 @@
 # GDELT Data Collection
 # April 7th, 2023
 
+#### SETUP ####
+
+rm(list=ls())
+
 # importing packages 
 library(tidyverse)
 library(bigrquery)
-
-#### SETUP ####
 
 # bigrquery setup
 # authorize bigquery below if not authorized
