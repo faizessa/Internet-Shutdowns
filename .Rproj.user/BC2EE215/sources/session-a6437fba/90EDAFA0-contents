@@ -144,4 +144,14 @@ gdelt_panel <- gdelt_panel %>%
   left_join(ShutdownData, by = c("year", "week", "ActionGeo_ADM2Code")) %>%
   mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
 
+# creating groups for callawa-santa'anna diff-in-diff (first time treated)
+gdelt_did_groups <- gdelt_panel %>%
+  filter(shutdown == 1) %>%
+  group_by(ActionGeo_ADM2Code) %>%
+  summarise(group = min(time))
+
+gdelt_panel <- gdelt_panel %>%
+  left_join(gdelt_did_groups, by = "ActionGeo_ADM2Code") %>% 
+  mutate(group = ifelse(is.na(group), 0, group))
+
 write_csv(gdelt_panel, "Data/GDELT/gdelt_panel.csv")
