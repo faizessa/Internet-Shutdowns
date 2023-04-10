@@ -90,7 +90,7 @@ gdelt_panel <- gdelt_panel %>%
   mutate(intense_protests = ifelse(protest_count > protestp75, 1, 0),
          intense_assaults = ifelse(assault_count > assaultp75, 1, 0),
          intense_fights = ifelse(fight_count > fightp75, 1, 0),
-         intence_massviolence = ifelse(assault_count > assaultp75, 1, 0))
+         intense_massviolence = ifelse(assault_count > assaultp75, 1, 0))
 
 #### MERGING IN SHUTDOWN DATA ####
 
