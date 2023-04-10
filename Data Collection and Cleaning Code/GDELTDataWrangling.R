@@ -1,6 +1,6 @@
 # Faiz Essa
 # GDELT Data Wrangling
-# April 7th, 2023
+# April 10, 2023
 
 #### SETUP ####
 rm(list=ls())
@@ -9,9 +9,15 @@ rm(list=ls())
 library(tidyverse)
 library(haven)
 library(lubridate)
+library(readxl)
 
 # data import 
 raw_data <- read_rds("Data/GDELT/RawGDELT.rds")
+ShutdownData2022 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 1)
+ShutdownData2021 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 2)
+ShutdownData2020 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 3)
+ShutdownData2019 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 4)
+ShutdownDataPre19 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 5)
 
 # dropping obs with missing district
 # fixing date format
@@ -88,9 +94,54 @@ gdelt_panel <- gdelt_panel %>%
 
 #### MERGING IN SHUTDOWN DATA ####
 
+# keeping relevant vars
+ShutdownData2022 <- select(ShutdownData2022, start_date, area_name)
+ShutdownData2021 <- select(ShutdownData2021, start_date, area_name)
+ShutdownData2020 <- select(ShutdownData2020, start_date, area_name)
+ShutdownData2019 <- select(ShutdownData2019, start_date, area_name)
+ShutdownDataPre19 <- select(ShutdownDataPre19, start_date, area_name)
 
-            
+# concatinating dataframes
+ShutdownData <- bind_rows(list(ShutdownData2022, ShutdownData2021, 
+                               ShutdownData2020, ShutdownData2019,
+                               ShutdownDataPre19))
 
+# merging ADM2Codes with names 
+ADM2Crosswalk <- read_delim(
+  "/Users/faizessa/Documents/data/GNS-GAUL-ADM2-CROSSWALK.txt",
+  delim = "\t") 
 
+# keeping relevant vars 
+ADM2Crosswalk <- select(ADM2Crosswalk, GAULADM2Code, GAULADM2Name) %>%
+  rename(ActionGeo_ADM2Code = GAULADM2Code) 
 
+# creating list of unique districts
+ActionGeo_ADM2Code <- ActionGeo_ADM2Code %>%
+  mutate(ActionGeo_ADM2Code = as.double(ActionGeo_ADM2Code)) %>%
+  left_join(ADM2Crosswalk, by = "ActionGeo_ADM2Code", multiple = "all") %>%
+  distinct() %>%
+  filter(GAULADM2Name != "Administrative unit not available")
 
+# defining pattern for extraction 
+district_pattern <- paste(unique(ActionGeo_ADM2Code$GAULADM2Name), 
+                          collapse = "|")
+
+# Adding district names to shutdown data 
+ShutdownData <- ShutdownData %>%
+  mutate(year = year(start_date), week = week(start_date),
+         GAULADM2Name = str_extract_all(area_name, district_pattern)) %>%
+  mutate(GAULADM2Name = ifelse(lengths(GAULADM2Name)==0, NA, GAULADM2Name)) %>%
+  filter(!is.na(GAULADM2Name)) %>%
+  unnest(GAULADM2Name) %>% 
+  left_join(ActionGeo_ADM2Code, by = "GAULADM2Name") %>%
+  select(year, week, ActionGeo_ADM2Code) %>%
+  distinct() %>%
+  mutate(shutdown = 1)
+
+# merging shutdown data into panel
+gdelt_panel <- gdelt_panel %>%
+  mutate(ActionGeo_ADM2Code = as.double(ActionGeo_ADM2Code)) %>%
+  left_join(ShutdownData, by = c("year", "week", "ActionGeo_ADM2Code")) %>%
+  mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
+
+write_csv(gdelt_panel, "Data/GDELT/gdelt_panel.csv")
