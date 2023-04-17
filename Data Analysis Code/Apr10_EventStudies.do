@@ -125,4 +125,25 @@ coefplot (protest_indicator, label(Protest Indicator)) ///
 graph export "results/Apr10_EventStudies/indicators.png", replace
 estimates clear
 
+// plotting all ''threshold indicator'' on same plot
+// plotting all log regressions on same plot
+foreach v of varlist intense_protests intense_assaults intense_fights {
+	quietly reghdfe `v' ///
+		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
+		shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
+		absorb(actiongeo_adm2code time) cluster(actiongeo_adm2code)
+	estimates store `v'
+}
+
+coefplot (intense_protests, label(Protest Threshold Indicator)) ///
+	(intense_assaults, label(Assault Threshold Indicator)) ///
+	(intense_fights, label(Fight Threshold Indicator)),  ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny)  ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Coefficient")
 	
+graph export "results/Apr10_EventStudies/thresholds.png", replace
+estimates clear
