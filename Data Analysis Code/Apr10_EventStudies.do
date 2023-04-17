@@ -40,6 +40,7 @@ drop protestp75 assaultp75 fightp75 massviolencep75
 
 // ********** REGRESSIONS **********
 
+// single plot for each regression
 foreach v of varlist protest_count-intense_massviolence {
 	quietly reghdfe `v' ///
 		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
@@ -56,5 +57,72 @@ foreach v of varlist protest_count-intense_massviolence {
 	graph export "results/Apr10_EventStudies/`v'.png", replace
 }
 
+
+// plotting all raw counts on same plot
+foreach v of varlist protest_count assault_count fight_count {
+	quietly reghdfe `v' ///
+		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
+		shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
+		absorb(actiongeo_adm2code time) cluster(actiongeo_adm2code)
+	estimates store `v'
+}
+
+coefplot (protest_count, label(Protests)) ///
+	(assault_count, label(Assaults)) ///
+	(fight_count, label(Fights)),  ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny)  ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Coefficient")
 	
+graph export "results/Apr10_EventStudies/raw_counts.png", replace
+estimates clear
+
+// plotting all log regressions on same plot
+foreach v of varlist log_protests log_assaults log_fights {
+	quietly reghdfe `v' ///
+		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
+		shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
+		absorb(actiongeo_adm2code time) cluster(actiongeo_adm2code)
+	estimates store `v'
+}
+
+coefplot (log_protests, label(log(Protests))) ///
+	(log_assaults, label(log(Assaults))) ///
+	(log_fights, label(log(Fights))),  ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny)  ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Coefficient")
+	
+graph export "results/Apr10_EventStudies/logs.png", replace
+estimates clear
+
+// plotting all indicators on same plot
+// plotting all log regressions on same plot
+foreach v of varlist protest_indicator assault_indicator fight_indicator {
+	quietly reghdfe `v' ///
+		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
+		shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
+		absorb(actiongeo_adm2code time) cluster(actiongeo_adm2code)
+	estimates store `v'
+}
+
+coefplot (protest_indicator, label(Protest Indicator)) ///
+	(assault_indicator, label(Assault Indicator)) ///
+	(fight_indicator, label(Fight Indicator)),  ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny)  ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Coefficient")
+	
+graph export "results/Apr10_EventStudies/indicators.png", replace
+estimates clear
+
 	
