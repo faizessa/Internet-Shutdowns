@@ -18,7 +18,9 @@ ShutdownData2021 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 
 ShutdownData2020 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 3)
 ShutdownData2019 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 4)
 ShutdownDataPre19 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 5)
+raw_tone_data <- read_rds("Data/GDELT/RawGDELTTone.rds")
 
+#### CONSTRUCTING PANEL ####
 # dropping obs with missing district
 # fixing date format
 raw_data <- raw_data %>%
@@ -26,7 +28,6 @@ raw_data <- raw_data %>%
   mutate(date = as.Date(as.character(SQLDATE), "%Y%m%d")) %>%
   select(!SQLDATE)
 
-#### CONSTRUCTING PANEL ####
 date_list <- seq.POSIXt(ISOdate(2015,1,1),ISOdate(2023,1,1), by="day")
 
 # list of event codes 
@@ -102,17 +103,17 @@ ShutdownData2019 <- select(ShutdownData2019, start_date, area_name)
 ShutdownDataPre19 <- select(ShutdownDataPre19, start_date, area_name)
 
 # concatinating dataframes
-ShutdownData <- bind_rows(list(ShutdownData2022, ShutdownData2021, 
+ShutdownDataRaw <- bind_rows(list(ShutdownData2022, ShutdownData2021, 
                                ShutdownData2020, ShutdownData2019,
                                ShutdownDataPre19))
 
 # merging ADM2Codes with names 
-ADM2Crosswalk <- read_delim(
+ADM2CrosswalkRaw <- read_delim(
   "/Users/faizessa/Documents/data/GNS-GAUL-ADM2-CROSSWALK.txt",
   delim = "\t") 
 
 # keeping relevant vars 
-ADM2Crosswalk <- select(ADM2Crosswalk, GAULADM2Code, GAULADM2Name) %>%
+ADM2Crosswalk <- select(ADM2CrosswalkRaw, GAULADM2Code, GAULADM2Name) %>%
   rename(ActionGeo_ADM2Code = GAULADM2Code) 
 
 # creating list of unique districts
@@ -127,7 +128,7 @@ district_pattern <- paste(unique(ActionGeo_ADM2Code$GAULADM2Name),
                           collapse = "|")
 
 # Adding district names to shutdown data 
-ShutdownData <- ShutdownData %>%
+ShutdownData <- ShutdownDataRaw %>%
   mutate(year = year(start_date), week = week(start_date),
          GAULADM2Name = str_extract_all(area_name, district_pattern)) %>%
   mutate(GAULADM2Name = ifelse(lengths(GAULADM2Name)==0, NA, GAULADM2Name)) %>%
@@ -155,3 +156,81 @@ gdelt_panel <- gdelt_panel %>%
   mutate(group = ifelse(is.na(group), 0, group))
 
 write_csv(gdelt_panel, "Data/GDELT/gdelt_panel.csv")
+
+#### CONSRTRUCTING PANEL FOR TONE DATA ####
+
+# dropping obs with missing district
+# fixing date format
+raw_tone_data <- raw_tone_data %>%
+  filter(!is.na(Actor1Geo_ADM2Code)) %>%
+  mutate(date = as.Date(as.character(SQLDATE), "%Y%m%d")) %>%
+  select(!SQLDATE)
+
+# creates list of unique adm2 codes
+Actor1Geo_ADM2Code <- raw_tone_data %>%
+  distinct(Actor1Geo_ADM2Code)
+
+# creating `blank` panel
+dates <- data.frame(date=date_list) %>%
+  mutate(date = as.Date(date)) %>%
+  crossing(Actor1Geo_ADM2Code) %>%
+  arrange(Actor1Geo_ADM2Code, date)
+
+# merging in gdelt tone data
+gdelt_tone_panel <- dates %>%
+  left_join(raw_tone_data, by = c("Actor1Geo_ADM2Code", "date")) %>%
+  arrange(Actor1Geo_ADM2Code, date) 
+
+#### AGGREGATING TONE DATA TO WEEKLY LEVEL ####
+
+gdelt_tone_panel <- gdelt_tone_panel %>%
+  mutate(year = year(date), week = week(date)) %>%
+  group_by(Actor1Geo_ADM2Code, year, week) %>%
+  summarize(TotalTone = sum(f1_, na.rm = TRUE),
+            EventCount = sum(f0_, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(AvgTone = ifelse(EventCount != 0, TotalTone/EventCount, NA)) %>%
+  group_by(year, week) %>%
+  mutate(time = cur_group_id()) %>%
+  ungroup() %>%
+  relocate(time, .before = TotalTone)
+
+#### MERGING IN SHUTDOWN DATA TO TONE PANEL ####
+
+# keeping relevant vars 
+ADM2Crosswalk <- select(ADM2CrosswalkRaw, GAULADM2Code, GAULADM2Name) %>%
+  rename(Actor1Geo_ADM2Code = GAULADM2Code) 
+
+# creating list of unique districts
+Actor1Geo_ADM2Code <- Actor1Geo_ADM2Code %>%
+  mutate(Actor1Geo_ADM2Code = as.double(Actor1Geo_ADM2Code)) %>%
+  left_join(ADM2Crosswalk, by = "Actor1Geo_ADM2Code", multiple = "all") %>%
+  distinct() %>%
+  filter(GAULADM2Name != "Administrative unit not available")
+
+# defining pattern for extraction 
+district_pattern <- paste(unique(Actor1Geo_ADM2Code$GAULADM2Name), 
+                          collapse = "|")
+
+# Adding district names to shutdown data 
+ShutdownData2 <- ShutdownDataRaw %>%
+  mutate(year = year(start_date), week = week(start_date),
+         GAULADM2Name = str_extract_all(area_name, district_pattern)) %>%
+  mutate(GAULADM2Name = ifelse(lengths(GAULADM2Name)==0, NA, GAULADM2Name)) %>%
+  filter(!is.na(GAULADM2Name)) %>%
+  unnest(GAULADM2Name) %>% 
+  left_join(Actor1Geo_ADM2Code, by = "GAULADM2Name") %>%
+  select(year, week, Actor1Geo_ADM2Code) %>%
+  distinct() %>%
+  mutate(shutdown = 1)
+
+# merging shutdown data into panel
+gdelt_tone_panel <- gdelt_tone_panel %>%
+  mutate(Actor1Geo_ADM2Code = as.double(Actor1Geo_ADM2Code)) %>%
+  left_join(ShutdownData2, by = c("year", "week", "Actor1Geo_ADM2Code")) %>%
+  mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
+
+# saving data
+write_csv(gdelt_tone_panel, "Data/GDELT/gdelt_tone_panel.csv", na = "")
+
+
