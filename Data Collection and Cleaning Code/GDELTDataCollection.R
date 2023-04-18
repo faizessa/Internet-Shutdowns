@@ -15,7 +15,7 @@ library(bigrquery)
 # bq_auth(email = "faiz.essa@gmail.com")
 billing <- "whatsappgdelt"
 
-#### DATA DOWNLOAD ####
+#### DATA DOWNLOAD - GDELT EVENTS ####
 
 # sql query
 sql <- 
@@ -36,4 +36,23 @@ gdelt.table <- bq_table_download(gdelt.data)
 
 # saving raw data
 write_rds(gdelt.table, "Data/GDELT/RawGDELT.rds")
+
+#### DATA DOWNLOAD - GDELT TONE ####
+
+sql2 <- 
+  "SELECT Actor1Geo_ADM2Code, SQLDATE, COUNT(*), SUM(AvgTone)
+FROM `gdelt-bq.gdeltv2.events` 
+WHERE (Actor1Geo_CountryCode = 'IN') AND (Year >= 2015)
+  AND (Actor1Type1Code = 'GOV' OR Actor1Type2Code = 'GOV' OR Actor1Type3Code = 'GOV')
+GROUP BY Actor1Geo_ADM2Code, SQLDATE
+"
+
+# data import
+gdelt.data.2 <- bq_project_query(billing, sql2)
+gdelt.table.2 <- bq_table_download(gdelt.data.2)
+
+# saving raw data
+write_rds(gdelt.table.2, "Data/GDELT/RawGDELTTone.rds")
+
+
 
