@@ -105,7 +105,8 @@ ShutdownDataPre19 <- select(ShutdownDataPre19, start_date, area_name)
 # concatinating dataframes
 ShutdownDataRaw <- bind_rows(list(ShutdownData2022, ShutdownData2021, 
                                ShutdownData2020, ShutdownData2019,
-                               ShutdownDataPre19))
+                               ShutdownDataPre19)) %>%
+  mutate(area_name = tolower(area_name))
 
 # merging ADM2Codes with names 
 ADM2CrosswalkRaw <- read_delim(
@@ -121,7 +122,8 @@ ActionGeo_ADM2Code <- ActionGeo_ADM2Code %>%
   mutate(ActionGeo_ADM2Code = as.double(ActionGeo_ADM2Code)) %>%
   left_join(ADM2Crosswalk, by = "ActionGeo_ADM2Code", multiple = "all") %>%
   distinct() %>%
-  filter(GAULADM2Name != "Administrative unit not available")
+  filter(GAULADM2Name != "Administrative unit not available") %>%
+  mutate(GAULADM2Name = tolower(GAULADM2Name))
 
 # defining pattern for extraction 
 district_pattern <- paste(unique(ActionGeo_ADM2Code$GAULADM2Name), 
@@ -218,7 +220,8 @@ Actor1Geo_ADM2Code <- Actor1Geo_ADM2Code %>%
   mutate(Actor1Geo_ADM2Code = as.double(Actor1Geo_ADM2Code)) %>%
   left_join(ADM2Crosswalk, by = "Actor1Geo_ADM2Code", multiple = "all") %>%
   distinct() %>%
-  filter(GAULADM2Name != "Administrative unit not available")
+  filter(GAULADM2Name != "Administrative unit not available") %>%
+  mutate(GAULADM2Name = tolower(GAULADM2Name))
 
 # defining pattern for extraction 
 district_pattern <- paste(unique(Actor1Geo_ADM2Code$GAULADM2Name), 
