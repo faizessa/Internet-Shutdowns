@@ -1,13 +1,12 @@
 # Faiz Essa
 # GDELT Data Wrangling
-# April 10, 2023
+# April 18th, 2023
 
 #### SETUP ####
 rm(list=ls())
 
 # importing packages 
 library(tidyverse)
-library(haven)
 library(lubridate)
 library(readxl)
 
@@ -29,7 +28,7 @@ raw_data <- raw_data %>%
   mutate(date = as.Date(as.character(SQLDATE), "%Y%m%d")) %>%
   select(!SQLDATE)
 
-date_list <- seq.POSIXt(ISOdate(2015,1,1),ISOdate(2023,1,1), by="day")
+date_list <- seq.POSIXt(ISOdate(2016,1,1),ISOdate(2023,1,1), by="day")
 
 # list of event codes 
 event_codes <- raw_data %>%
