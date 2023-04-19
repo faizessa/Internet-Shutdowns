@@ -13,7 +13,9 @@ import delimited "Data/GDELT/gdelt_tone_panel.csv", clear
 
 // ********** DATA WRANGLING **********
 
-g log_tone = log(avgtone + 21)
+g log_govtone = log(avggovtone + 21)
+g log_opptone = log(avgopptone + 21)
+
 
 // creating dummies for event studies 
 sort actor1geo_adm2code time
@@ -38,32 +40,51 @@ by actor1geo_adm2code: gen lag8 = shutdown[_n-8] == 1
 
 // ********** REGRESSIONS **********
 
-reghdfe avgtone ///
-	lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
-	shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
-	absorb(actor1geo_adm2code time) cluster(actor1geo_adm2code)
-	
-coefplot,  ///
+foreach v of varlist avggovtone avgopptone log_govtone log_opptone {
+	reghdfe `v' ///
+		lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
+		shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
+		absorb(actor1geo_adm2code time) cluster(actor1geo_adm2code)
+	estimates store `v'
+}
+
+coefplot avggovtone, ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
-	scheme(s1color) msize(tiny) ciopts(recast(rcap)) recast(connected) ///
+	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
 	xline(9, lpattern(dash)) yline(0) ///
-	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Average Tone")
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Incument Attitudes")
 	
-graph export "results/Apr18_EventStudies/avgtone.png", replace
-
-reghdfe log_tone ///
-	lead8 lead7 lead6 lead5 lead4 lead3 lead2 lead1 ///
-	shutdown lag1 lag2 lag3 lag4 lag5 lag6 lag7 lag8, ///
-	absorb(actor1geo_adm2code time) cluster(actor1geo_adm2code)
-
-coefplot,  ///
+graph export "results/Apr18_EventStudies/govtone.png", replace
+	
+coefplot log_govtone, ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
-	scheme(s1color) msize(tiny) ciopts(recast(rcap)) recast(connected)  ///
+	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
 	xline(9, lpattern(dash)) yline(0) ///
-	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on log(Average Tone + 21)")
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Incument Attitudes (log transformation)")
 
-graph export "results/Apr18_EventStudies/log_tone.png", replace
+graph export "results/Apr18_EventStudies/log_govtone.png", replace
+
+coefplot avgopptone, ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Opposition Attitudes")
+	
+graph export "results/Apr18_EventStudies/opptone.png", replace
+
+coefplot log_opptone, ///
+	vertical drop(_cons) ///
+	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
+	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
+	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
+	xline(9, lpattern(dash)) yline(0) ///
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Oppostion Attitudes (log transformation)")
+
+graph export "results/Apr18_EventStudies/log_opptone.png", replace
+

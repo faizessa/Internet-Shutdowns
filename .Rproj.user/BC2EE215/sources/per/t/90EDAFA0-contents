@@ -18,7 +18,8 @@ ShutdownData2021 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 
 ShutdownData2020 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 3)
 ShutdownData2019 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 4)
 ShutdownDataPre19 <- read_excel("Data/Shutdowns/shutdown_data_raw.xlsx", sheet = 5)
-raw_tone_data <- read_rds("Data/GDELT/RawGDELTTone.rds")
+raw_tone_data <- read_rds("Data/GDELT/RawGDELTGovTone.rds") # government tone
+raw_tone_data_2 <- read_rds("Data/GDELT/RawGDELTOppTone.rds") # opposition tone
 
 #### CONSTRUCTING PANEL ####
 # dropping obs with missing district
@@ -160,14 +161,22 @@ write_csv(gdelt_panel, "Data/GDELT/gdelt_panel.csv")
 #### CONSRTRUCTING PANEL FOR TONE DATA ####
 
 # dropping obs with missing district
-# fixing date format
+# fixing date format and renaming vars
 raw_tone_data <- raw_tone_data %>%
   filter(!is.na(Actor1Geo_ADM2Code)) %>%
   mutate(date = as.Date(as.character(SQLDATE), "%Y%m%d")) %>%
-  select(!SQLDATE)
+  select(!SQLDATE) %>%
+  rename(GovEvents = f0_, GovTone = f1_)
+
+raw_tone_data_2 <- raw_tone_data_2 %>%
+  filter(!is.na(Actor1Geo_ADM2Code)) %>%
+  mutate(date = as.Date(as.character(SQLDATE), "%Y%m%d")) %>%
+  select(!SQLDATE) %>%
+  rename(OppEvents = f0_, OppTone = f1_)
 
 # creates list of unique adm2 codes
 Actor1Geo_ADM2Code <- raw_tone_data %>%
+  bind_rows(raw_tone_data_2) %>%
   distinct(Actor1Geo_ADM2Code)
 
 # creating `blank` panel
@@ -179,6 +188,7 @@ dates <- data.frame(date=date_list) %>%
 # merging in gdelt tone data
 gdelt_tone_panel <- dates %>%
   left_join(raw_tone_data, by = c("Actor1Geo_ADM2Code", "date")) %>%
+  left_join(raw_tone_data_2, by = c("Actor1Geo_ADM2Code", "date")) %>%
   arrange(Actor1Geo_ADM2Code, date) 
 
 #### AGGREGATING TONE DATA TO WEEKLY LEVEL ####
@@ -186,14 +196,17 @@ gdelt_tone_panel <- dates %>%
 gdelt_tone_panel <- gdelt_tone_panel %>%
   mutate(year = year(date), week = week(date)) %>%
   group_by(Actor1Geo_ADM2Code, year, week) %>%
-  summarize(TotalTone = sum(f1_, na.rm = TRUE),
-            EventCount = sum(f0_, na.rm = TRUE)) %>%
+  summarize(GovEvents = sum(GovEvents, na.rm = TRUE),
+            OppEvents = sum(OppEvents, na.rm = TRUE),
+            GovTone = sum(GovTone, na.rm = TRUE),
+            OppTone = sum(OppTone, na.rm = TRUE)) %>%
   ungroup() %>%
-  mutate(AvgTone = ifelse(EventCount != 0, TotalTone/EventCount, NA)) %>%
+  mutate(AvgGovTone = ifelse(GovEvents != 0, GovTone/GovEvents, NA),
+         AvgOppTone = ifelse(OppEvents != 0, OppTone/OppEvents, NA)) %>%
   group_by(year, week) %>%
   mutate(time = cur_group_id()) %>%
   ungroup() %>%
-  relocate(time, .before = TotalTone)
+  relocate(time, .before = GovEvents)
 
 #### MERGING IN SHUTDOWN DATA TO TONE PANEL ####
 

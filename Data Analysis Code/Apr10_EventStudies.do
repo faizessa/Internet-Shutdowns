@@ -50,7 +50,7 @@ foreach v of varlist protest_count-intense_massviolence {
 	coefplot, vertical drop(_cons) ///
 		xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 		10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
-		scheme(s1color) ciopts(recast(rcap)) recast(connected) ///
+		scheme(s1color) ciopts(recast(rcap)) recast(connected) msize(tiny) ///
 		xline(9, lpattern(dash)) yline(0) ///
 		xtitle("Weeks to Shutdown") ytitle("Estimated Coefficient")
 	
@@ -67,9 +67,9 @@ foreach v of varlist protest_count assault_count fight_count {
 	estimates store `v'
 }
 
-coefplot (protest_count, label(Protests)) ///
+coefplot (protest_count, label(Protests) offset(-.15)) ///
 	(assault_count, label(Assaults)) ///
-	(fight_count, label(Fights)),  ///
+	(fight_count, label(Fights) offset(.15)),  ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
@@ -89,9 +89,9 @@ foreach v of varlist log_protests log_assaults log_fights {
 	estimates store `v'
 }
 
-coefplot (log_protests, label(log(Protests))) ///
+coefplot (log_protests, label(log(Protests)) offset(-.15)) ///
 	(log_assaults, label(log(Assaults))) ///
-	(log_fights, label(log(Fights))),  ///
+	(log_fights, label(log(Fights)) offset(.15)),  ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
@@ -112,9 +112,9 @@ foreach v of varlist protest_indicator assault_indicator fight_indicator {
 	estimates store `v'
 }
 
-coefplot (protest_indicator, label(Protest Indicator)) ///
+coefplot (protest_indicator, label(Protest Indicator) offset(-.15)) ///
 	(assault_indicator, label(Assault Indicator)) ///
-	(fight_indicator, label(Fight Indicator)),  ///
+	(fight_indicator, label(Fight Indicator) offset(.15)),  ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
@@ -135,9 +135,9 @@ foreach v of varlist intense_protests intense_assaults intense_fights {
 	estimates store `v'
 }
 
-coefplot (intense_protests, label(Protest Threshold Indicator)) ///
+coefplot (intense_protests, label(Protest Threshold Indicator) offset(-.15)) ///
 	(intense_assaults, label(Assault Threshold Indicator)) ///
-	(intense_fights, label(Fight Threshold Indicator)),  ///
+	(intense_fights, label(Fight Threshold Indicator) offset(.15)),  ///
 	vertical drop(_cons) ///
 	xlab(1 "-8" 2 "-7" 3 "-6" 4 "-5" 5 "-4" 6 "-3" 7 "-2" 8 "-1" 9 "0" ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
