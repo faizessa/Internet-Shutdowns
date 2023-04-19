@@ -64,7 +64,7 @@ coefplot log_govtone, ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
 	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
 	xline(9, lpattern(dash)) yline(0) ///
-	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Incument Attitudes (log transformation)")
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Incument Attitudes (log)")
 
 graph export "results/Apr18_EventStudies/log_govtone.png", replace
 
@@ -84,7 +84,7 @@ coefplot log_opptone, ///
 	10 "1" 11 "2" 12 "3" 13 "4" 14 "5" 15 "6" 16 "7" 17 "8") ///
 	scheme(s1color) msize(tiny) recast(connected) ciopts(recast(rcap)) ///
 	xline(9, lpattern(dash)) yline(0) ///
-	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Oppostion Attitudes (log transformation)")
+	xtitle("Weeks to Shutdown") ytitle("Estimated Effect on Oppostion Attitudes (log)")
 
 graph export "results/Apr18_EventStudies/log_opptone.png", replace
 
