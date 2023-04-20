@@ -1,6 +1,6 @@
 # Faiz Essa
 # GDELT Data Wrangling
-# April 18th, 2023
+# April 19th, 2023
 
 #### SETUP ####
 rm(list=ls())
