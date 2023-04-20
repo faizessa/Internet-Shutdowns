@@ -1,0 +1,62 @@
+# Faiz Essa
+# GDELT Protest Data difference-in-differences plots
+# April 20th, 2023
+
+#### SETUP ####
+rm(list=ls())
+
+# importing packages 
+library(tidyverse)
+library(did)
+
+#### PLOTTING PROTEST DID RESULTS ####
+
+depvars <- 
+  c("protest_count", "log_protests", "protest_indicator", "intense_protests",
+    "assault_count", "log_assaults", "assault_indicator", "intense_assaults",
+    "fight_count", "log_fights", "fight_indicator", "intense_fights")
+
+for (y in depvars) {
+  # filepath to read
+  filepath <- paste("/Users/faizessa/Documents/Data/GDELTProtestDiD/", 
+                    y, ".rds", sep = "")
+  # import estimates
+  estimates <- readRDS(filepath)
+  
+  # aggregating treatment effects into event study plot
+  agg <- aggte(MP = estimates, type = "dynamic", min_e = -8, max_e = 8)
+  
+  # saving plot
+  ggdid(agg)
+  fig_filepath <- paste("results/GDELTProtestDiD/", y, ".png", sep = "")
+  ggsave(fig_filepath)
+  # clearing data
+  rm(list=ls())
+} 
+
+#### PLOTTING TONE DID RESULTS ####
+
+depvars <- c("AvgGovTone", "log_AvgGovTone",
+             "AvgOppTone", "log_AvgOppTone")
+
+for (y in depvars) {
+  # filepath to read
+  filepath <- paste("/Users/faizessa/Documents/Data/GDELTToneDiD/", 
+                    y, ".rds", sep = "")
+  # import estimates
+  estimates <- readRDS(filepath)
+  
+  # aggregating treatment effects into event study plot
+  agg <- aggte(MP = estimates, type = "dynamic", min_e = -8, max_e = 8, na.rm = TRUE)
+  
+  # saving plot
+  ggdid(agg)
+  fig_filepath <- paste("results/GDELTToneDiD/", y, ".png", sep = "")
+  ggsave(fig_filepath)
+  # clearing data
+  rm(list=ls())
+} 
+
+
+
+  

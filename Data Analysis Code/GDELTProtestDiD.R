@@ -20,7 +20,7 @@ depvars <-
 
 # loop through each dependent variable
 for (y in depvars) {
-  # retreive estimates
+  # retrieve estimates
   estimates <- att_gt(yname = y,
                       tname = "time",
                       idname = "ActionGeo_ADM2Code",

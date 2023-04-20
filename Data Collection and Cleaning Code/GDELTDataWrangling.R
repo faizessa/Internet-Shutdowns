@@ -245,6 +245,16 @@ gdelt_tone_panel <- gdelt_tone_panel %>%
   left_join(ShutdownData2, by = c("year", "week", "Actor1Geo_ADM2Code")) %>%
   mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
 
+# creating groups for callawa-santa'anna diff-in-diff (first time treated)
+gdelt_tone_did_groups <- gdelt_tone_panel %>%
+  filter(shutdown == 1) %>%
+  group_by(Actor1Geo_ADM2Code) %>%
+  summarise(group = min(time))
+
+gdelt_tone_panel <- gdelt_tone_panel %>%
+  left_join(gdelt_tone_did_groups, by = "Actor1Geo_ADM2Code") %>% 
+  mutate(group = ifelse(is.na(group), 0, group))
+
 # saving data
 write_csv(gdelt_tone_panel, "Data/GDELT/gdelt_tone_panel.csv", na = "")
 
