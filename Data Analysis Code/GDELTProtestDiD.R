@@ -30,7 +30,9 @@ for (y in depvars) {
                       bstrap = TRUE,
                       clustervars = c("ActionGeo_ADM2Code"))
   # saving estimates
-  write_rds(estimates, paste("results/GDELTProtestDiD/", y, ".rds", sep = ""))
+  write_rds(estimates, 
+            paste("/Users/faizessa/Documents/Data/GDELTProtestDiD/", 
+                  y, ".rds", sep = ""))
   rm(estimates)
 }
 
