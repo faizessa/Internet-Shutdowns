@@ -1,0 +1,153 @@
+# Faiz Essa
+# Difference-in-differences plots for paper
+# April 24th, 2023
+
+#### SETUP ####
+rm(list=ls())
+
+# importing packages 
+library(tidyverse)
+library(did)
+
+#### AGREGGATING GDELT TREATMENT EFFECTS ####
+depvars <- c("protest_count", "fight_count", "assault_count",
+             "log_protests", "log_assaults", "log_fights",
+             "protest_indicator", "fight_indicator", "assault_indicator")
+
+for (y in depvars) {
+  # filepath
+  filepath <- paste("/Users/faizessa/Documents/Data/GDELTProtestDiD/", 
+                    y, ".rds", sep = "")
+  # import estimates
+  estimates <- readRDS(filepath)
+  
+  # aggregating treatment effects into event study plot
+  agg <- aggte(MP = estimates, type = "dynamic", min_e = -8, max_e = 8)
+  
+  # saving estimates and SE's to dataframe
+  df <- data.frame(agg[["att.egt"]], agg[["se.egt"]])
+  colnames(df) <- c("coef", "se")
+  df <- df %>%
+    mutate(ci = se * 1.96) %>%
+    mutate(depvar = y) %>% 
+    relocate(depvar, .before = "coef")
+  time <- -8:8
+  df <- cbind(time, df)
+  # adding depvar to column names
+  assign(y, df)
+  rm(filepath, estimates, agg, df)
+}
+
+
+#### GENERATING GDELT PLOTS ####
+log_estimates <- rbind(log_protests, log_assaults, log_fights)
+count_estimates <- rbind(protest_count, assault_count, fight_count)
+indicator_estimates <- rbind(protest_indicator, assault_indicator, fight_indicator)
+
+pd <- position_dodge(.5) # move points to the left and right
+
+# raw counts plot
+ggplot(count_estimates, aes(x=time, y=coef, colour=depvar)) + 
+  geom_errorbar(aes(ymin=coef-ci, ymax=coef+ci), width=.1, position=pd) +
+  geom_point(position=pd) +
+  scale_colour_manual(values = c("darkgreen", "darkorange", "darkblue"), 
+                      labels=c('Assaults', 'Fights', 
+                               'Protests')) +
+  scale_x_continuous("Weeks to Shutdown", labels = as.character(time),
+                     breaks = time) +
+  labs(y = 'Estimated Effect', colour = "Dependent Variable") +
+  geom_hline(yintercept = 0, color = "darkred") + 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "darkred")
+ggsave("results/Draft2Figures/gdelt_counts_did.png")
+
+# log plot
+ggplot(log_estimates, aes(x=time, y=coef, colour=depvar)) + 
+  geom_errorbar(aes(ymin=coef-ci, ymax=coef+ci), width=.1, position=pd) +
+  geom_point(position=pd) +
+  scale_colour_manual(values = c("darkgreen", "darkorange", "darkblue"), 
+                      labels=c('log(Assaults + 1)', 'log(Fights + 1)', 
+                               'log(Protests + 1)')) +
+  scale_x_continuous("Weeks to Shutdown", labels = as.character(time),
+                     breaks = time) +
+  labs(y = 'Estimated Effect', colour = "Dependent Variable") +
+  geom_hline(yintercept = 0, color = "darkred") + 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "darkred")
+ggsave("results/Draft2Figures/gdelt_logs_did.png")
+
+# indicator plot
+ggplot(indicator_estimates, aes(x=time, y=coef, colour=depvar)) + 
+  geom_errorbar(aes(ymin=coef-ci, ymax=coef+ci), width=.1, position=pd) +
+  geom_point(position=pd) +
+  scale_colour_manual(values = c("darkgreen", "darkorange", "darkblue"), 
+                      labels=c('Assault Indicator', 'Fight Indicator', 
+                               'Protest Indicator')) +
+  scale_x_continuous("Weeks to Shutdown", labels = as.character(time),
+                     breaks = time) +
+  labs(y = 'Estimated Effect', colour = "Dependent Variable") +
+  geom_hline(yintercept = 0, color = "darkred") + 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "darkred")
+ggsave("results/Draft2Figures/gdelt_indicator_did.png")
+
+#### AGREGGATING PROWESS TREATMENT EFFECTS ####
+rm(list=ls())
+
+depvars <- c("AvgBSEPrice", "log_BSE",
+             "AvgNSEPrice", "log_NSE")
+
+for (y in depvars) {
+  # filepath
+  filepath <- paste("/Users/faizessa/Documents/Data/ProwessDiD/", 
+                    y, ".rds", sep = "")
+  # import estimates
+  estimates <- readRDS(filepath)
+  
+  # aggregating treatment effects into event study plot
+  agg <- aggte(MP = estimates, type = "dynamic", min_e = -8, max_e = 8, na.rm = TRUE)
+  
+  # saving estimates and SE's to dataframe
+  df <- data.frame(agg[["att.egt"]], agg[["se.egt"]])
+  colnames(df) <- c("coef", "se")
+  df <- df %>%
+    mutate(ci = se * 1.96) %>%
+    mutate(depvar = y) %>% 
+    relocate(depvar, .before = "coef")
+  time <- -8:8
+  df <- cbind(time, df)
+  # adding depvar to column names
+  assign(y, df)
+  rm(filepath, estimates, agg, df)
+}
+
+log_estimates <- rbind(log_BSE, log_NSE)
+estimates <- rbind(AvgBSEPrice, AvgNSEPrice)
+
+pd <- position_dodge(.5) # move points to the left and right
+
+# raw price plot
+ggplot(estimates, aes(x=time, y=coef, colour=depvar)) + 
+  geom_errorbar(aes(ymin=coef-ci, ymax=coef+ci), width=.1, position=pd) +
+  geom_point(position=pd) +
+  geom_line(position=pd) +
+  scale_colour_manual(values = c("darkgreen", "darkorange"), 
+                      labels=c('BSE Price', 'NSE Price')) +
+  scale_x_continuous("Weeks to Shutdown", labels = as.character(time),
+                     breaks = time) +
+  labs(y = 'Estimated Effect', colour = "Dependent Variable") +
+  geom_hline(yintercept = 0, color = "darkred") + 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "darkred")
+ggsave("results/Draft2Figures/prowess_price_did.png")
+
+# log price plot
+ggplot(log_estimates, aes(x=time, y=coef, colour=depvar)) + 
+  geom_errorbar(aes(ymin=coef-ci, ymax=coef+ci), width=.1, position=pd) +
+  geom_point(position=pd) +
+  geom_line(position=pd) +
+  scale_colour_manual(values = c("darkgreen", "darkorange"), 
+                      labels=c('log(BSE Price)', 'log(NSE Price)')) +
+  scale_x_continuous("Weeks to Shutdown", labels = as.character(time),
+                     breaks = time) +
+  labs(y = 'Estimated Effect', colour = "Dependent Variable") +
+  geom_hline(yintercept = 0, color = "darkred") + 
+  geom_vline(xintercept = 0, linetype = "dashed", color = "darkred")
+ggsave("results/Draft2Figures/prowess_log_did.png")
+

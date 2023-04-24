@@ -1,5 +1,5 @@
 # Faiz Essa
-# GDELT Protest Data difference-in-differences plots
+# Difference-in-differences plots
 # April 20th, 2023
 
 #### SETUP ####
