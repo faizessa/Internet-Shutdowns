@@ -255,6 +255,13 @@ gdelt_tone_panel <- gdelt_tone_panel %>%
   left_join(gdelt_tone_did_groups, by = "Actor1Geo_ADM2Code") %>% 
   mutate(group = ifelse(is.na(group), 0, group))
 
+# constructing z-score for attitudes towards incumbents
+
+gdelt_tone_panel <- gdelt_tone_panel %>%
+  group_by(Actor1Geo_ADM2Code) %>%
+  mutate(z_score = (GovTone - mean(GovTone))/sd(GovTone)) %>%
+  ungroup()
+
 # saving data
 write_csv(gdelt_tone_panel, "Data/GDELT/gdelt_tone_panel.csv", na = "")
 
