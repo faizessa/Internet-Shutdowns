@@ -1,0 +1,1119 @@
+start_date,country_name,iso3c,duration,geo_scope,shutdown_extent
+2016-01-26T00:00:00Z,India,IND,NA,regional,full network
+2016-02-16T00:00:00Z,Morocco,MAR,NA,national,service-based
+2016-02-18T00:00:00Z,Uganda,UGA,3,national,service-based
+2016-02-19T00:00:00Z,India,IND,3,regional,full network
+2016-02-22T00:00:00Z,India,IND,1,regional,full network
+2016-02-28T00:00:00Z,India,IND,NA,regional,full network
+2016-02-28T00:00:00Z,India,IND,NA,regional,full network
+2016-03-17T00:00:00Z,Saudi Arabia,SAU,NA,national,service-based
+2016-03-18T00:00:00Z,India,IND,NA,regional,full network
+2016-03-21T00:00:00Z,Pakistan,PAK,2,regional,full network
+2016-03-28T00:00:00Z,Pakistan,PAK,3,regional,full network
+2016-04-01T00:00:00Z,North Korea,PRK,NA,national,full network
+2016-04-09T00:00:00Z,Chad,TCD,4,national,service-based
+2016-04-14T00:00:00Z,India,IND,4,regional,full network
+2016-04-16T00:00:00Z,India,IND,NA,local,full network
+2016-04-17T00:00:00Z,India,IND,2,regional,full network
+2016-05-02T00:00:00Z,Brazil,BRA,1,national,service-based
+2016-05-11T00:00:00Z,Uganda,UGA,NA,national,full network
+2016-05-14T00:00:00Z,Vietnam,VNM,NA,local,service-based
+2016-05-16T00:00:00Z,Iraq,IRQ,145,national,full network
+2016-05-16T00:00:00Z,India,IND,367,local,full network
+2016-05-22T00:00:00Z,Vietnam,VNM,4,national,service-based
+2016-05-30T00:00:00Z,Ethiopia,ETH,9,national,full network
+2016-06-01T00:00:00Z,Syria,SYR,13,national,full network
+2016-06-04T00:00:00Z,India,IND,NA,regional,full network
+2016-06-04T00:00:00Z,Iraq,IRQ,NA,local,service-based
+2016-06-15T00:00:00Z,India,IND,3,regional,full network
+2016-06-19T00:00:00Z,Algeria,DZA,NA,national,service-based
+2016-06-21T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2016-06-22T00:00:00Z,India,IND,NA,local,full network
+2016-06-22T00:00:00Z,India,IND,NA,regional,full network
+2016-06-23T00:00:00Z,Bahrain,BHR,NA,regional,full network
+2016-06-28T00:00:00Z,Turkey,TUR,1,national,NA
+2016-06-30T00:00:00Z,India,IND,2,regional,full network
+2016-07-06T00:00:00Z,Zimbabwe,ZWE,NA,local,service-based
+2016-07-07T00:00:00Z,India,IND,NA,regional,full network
+2016-07-09T00:00:00Z,India,IND,202,local,full network
+2016-07-11T00:00:00Z,Ethiopia,ETH,2,national,service-based
+2016-07-15T00:00:00Z,Turkey,TUR,NA,national,service-based
+2016-07-19T00:00:00Z,Brazil,BRA,NA,national,service-based
+2016-07-19T00:00:00Z,Libya,LBY,NA,regional,NA
+2016-07-20T00:00:00Z,Syria,SYR,NA,local,full network
+2016-07-31T00:00:00Z,Syria,SYR,11,national,full network
+2016-08-01T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2016-08-05T00:00:00Z,India,IND,1,regional,service-based
+2016-08-06T00:00:00Z,India,IND,2,regional,full network
+2016-08-07T00:00:00Z,Ethiopia,ETH,NA,regional,service-based
+2016-08-13T00:00:00Z,India,IND,5,regional,full network
+2016-08-14T00:00:00Z,Pakistan,PAK,NA,national,full network
+2016-08-18T00:00:00Z,Mali,MLI,NA,national,service-based
+2016-08-28T00:00:00Z,Gabon,GAB,32,national,NA
+2016-08-31T00:00:00Z,Uzbekistan,UZB,NA,national,NA
+2016-09-05T00:00:00Z,Pakistan,PAK,1,regional,full network
+2016-09-12T00:00:00Z,India,IND,NA,regional,full network
+2016-09-16T00:00:00Z,India,IND,1,regional,full network
+2016-09-17T00:00:00Z,Egypt,EGY,2,regional,full network
+2016-09-18T00:00:00Z,India,IND,2,regional,full network
+2016-10-08T00:00:00Z,Turkey,TUR,2,national,service-based
+2016-10-10T00:00:00Z,India,IND,2,regional,full network
+2016-10-11T00:00:00Z,Pakistan,PAK,1,national,full network
+2016-10-15T00:00:00Z,India,IND,5,regional,full network
+2016-10-16T00:00:00Z,Montenegro,MNE,NA,national,service-based
+2016-10-26T00:00:00Z,Syria,SYR,7,local,NA
+2016-10-26T00:00:00Z,Turkey,TUR,5,regional,full network
+2016-11-21T00:00:00Z,Pakistan,PAK,NA,national,NA
+2016-11-29T00:00:00Z,Pakistan,PAK,NA,local,NA
+2016-11-30T00:00:00Z,Gambia,GMB,2,national,full network
+2016-12-08T00:00:00Z,India,IND,NA,regional,full network
+2016-12-13T00:00:00Z,India,IND,NA,regional,full network
+2016-12-18T00:00:00Z,India,IND,12,regional,full network
+2016-12-18T00:00:00Z,Congo - Kinshasa,COD,1,national,NA
+2016-12-19T00:00:00Z,India,IND,NA,regional,NA
+2016-12-19T00:00:00Z,Egypt,EGY,NA,national,service-based
+2016-12-19T00:00:00Z,Turkey,TUR,1,national,NA
+2016-12-27T00:00:00Z,India,IND,3,regional,NA
+2017-01-01T00:00:00Z,Congo - Kinshasa,COD,NA,national,full network
+2017-01-14T00:00:00Z,Philippines,PHL,1,local,full network
+2017-01-17T00:00:00Z,Cameroon,CMR,93,regional,full network
+2017-01-19T00:00:00Z,India,IND,32,local,NA
+2017-01-29T00:00:00Z,India,IND,NA,regional,NA
+2017-01-30T00:00:00Z,India,IND,21,regional,full network
+2017-01-31T00:00:00Z,India,IND,NA,regional,NA
+2017-02-01T00:00:00Z,Iraq,IRQ,7,national,NA
+2017-02-17T00:00:00Z,India,IND,2,local,NA
+2017-02-23T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2017-02-25T00:00:00Z,India,IND,1,local,full network
+2017-03-15T00:00:00Z,Pakistan,PAK,NA,regional,NA
+2017-03-18T00:00:00Z,India,IND,1,regional,full network
+2017-03-19T00:00:00Z,Pakistan,PAK,4,local,NA
+2017-03-25T00:00:00Z,Belarus,BLR,NA,national,full network
+2017-03-31T00:00:00Z,India,IND,6,local,full network
+2017-04-09T00:00:00Z,India,IND,4,regional,full network
+2017-04-09T00:00:00Z,India,IND,2,regional,full network
+2017-04-17T00:00:00Z,India,IND,39,regional,full network
+2017-04-18T00:00:00Z,India,IND,1,regional,NA
+2017-04-19T00:00:00Z,India,IND,2,local,full network
+2017-04-28T00:00:00Z,Iran,IRN,NA,national,service-based
+2017-05-15T00:00:00Z,Ukraine,UKR,NA,national,service-based
+2017-05-24T00:00:00Z,India,IND,10,regional,full network
+2017-05-24T00:00:00Z,India,IND,11,local,full network
+2017-05-27T00:00:00Z,India,IND,6,regional,NA
+2017-05-30T00:00:00Z,Syria,SYR,14,national,full network
+2017-05-30T00:00:00Z,Ethiopia,ETH,9,national,full network
+2017-06-05T00:00:00Z,India,IND,NA,regional,NA
+2017-06-06T00:00:00Z,India,IND,NA,regional,NA
+2017-06-07T00:00:00Z,India,IND,2,regional,NA
+2017-06-07T00:00:00Z,Iraq,IRQ,6,national,NA
+2017-06-08T00:00:00Z,India,IND,2,regional,full network
+2017-06-12T00:00:00Z,India,IND,7,local,NA
+2017-06-12T00:00:00Z,Algeria,DZA,7,national,NA
+2017-06-18T00:00:00Z,India,IND,46,local,NA
+2017-06-30T00:00:00Z,India,IND,5,regional,NA
+2017-07-01T00:00:00Z,India,IND,NA,local,NA
+2017-07-05T00:00:00Z,India,IND,5,regional,NA
+2017-07-06T00:00:00Z,India,IND,3,regional,full network
+2017-07-10T00:00:00Z,India,IND,1,regional,full network
+2017-07-11T00:00:00Z,India,IND,3,regional,NA
+2017-07-11T00:00:00Z,China,CHN,NA,national,service-based
+2017-07-12T00:00:00Z,Syria,SYR,NA,national,full network
+2017-07-14T00:00:00Z,India,IND,4,regional,NA
+2017-07-16T00:00:00Z,India,IND,NA,regional,full network
+2017-07-16T00:00:00Z,Pakistan,PAK,1,regional,NA
+2017-07-20T00:00:00Z,Morocco,MAR,NA,local,full network
+2017-07-20T00:00:00Z,India,IND,NA,regional,full network
+2017-07-21T00:00:00Z,India,IND,4,regional,NA
+2017-07-28T00:00:00Z,Syria,SYR,15,national,full network
+2017-07-29T00:00:00Z,North Korea,PRK,NA,local,NA
+2017-07-30T00:00:00Z,India,IND,3,regional,full network
+2017-08-05T00:00:00Z,India,IND,NA,local,full network
+2017-08-07T00:00:00Z,Congo - Kinshasa,COD,NA,national,NA
+2017-08-09T00:00:00Z,India,IND,7,local,full network
+2017-08-10T00:00:00Z,India,IND,2,local,full network
+2017-08-13T00:00:00Z,India,IND,NA,regional,NA
+2017-08-14T00:00:00Z,Pakistan,PAK,NA,local,NA
+2017-08-15T00:00:00Z,India,IND,NA,regional,NA
+2017-08-16T00:00:00Z,India,IND,5,local,full network
+2017-08-24T00:00:00Z,India,IND,5,national,full network
+2017-08-25T00:00:00Z,India,IND,2,regional,full network
+2017-08-26T00:00:00Z,India,IND,NA,local,full network
+2017-08-26T00:00:00Z,Iraq,IRQ,NA,national,NA
+2017-09-01T00:00:00Z,India,IND,1,local,full network
+2017-09-02T00:00:00Z,India,IND,NA,regional,full network
+2017-09-04T00:00:00Z,India,IND,NA,local,full network
+2017-09-05T00:00:00Z,India,IND,NA,regional,full network
+2017-09-05T00:00:00Z,Togo,TGO,63,national,NA
+2017-09-08T00:00:00Z,India,IND,2,regional,full network
+2017-09-09T00:00:00Z,India,IND,NA,local,full network
+2017-09-09T00:00:00Z,India,IND,NA,local,full network
+2017-09-11T00:00:00Z,India,IND,NA,regional,full network
+2017-09-21T00:00:00Z,India,IND,4,local,full network
+2017-09-26T00:00:00Z,India,IND,NA,local,full network
+2017-09-28T00:00:00Z,India,IND,NA,regional,full network
+2017-09-28T00:00:00Z,Pakistan,PAK,6,local,service-based
+2017-09-30T00:00:00Z,Cameroon,CMR,NA,regional,service-based
+2017-10-01T00:00:00Z,India,IND,NA,regional,full network
+2017-10-23T00:00:00Z,Pakistan,PAK,NA,local,full network
+2017-10-27T00:00:00Z,Equatorial Guinea,GNQ,15,national,service-based
+2017-11-02T00:00:00Z,India,IND,NA,local,full network
+2017-11-09T00:00:00Z,India,IND,NA,local,full network
+2017-11-10T00:00:00Z,Pakistan,PAK,NA,local,full network
+2017-11-12T00:00:00Z,Equatorial Guinea,GNQ,NA,national,full network
+2017-11-13T00:00:00Z,Somalia,SOM,NA,regional,service-based
+2017-11-23T00:00:00Z,India,IND,NA,local,full network
+2017-11-24T00:00:00Z,India,IND,2,regional,full network
+2017-11-25T00:00:00Z,Pakistan,PAK,1,local,service-based
+2017-12-01T00:00:00Z,Pakistan,PAK,NA,local,full network
+2017-12-03T00:00:00Z,India,IND,NA,regional,NA
+2017-12-07T00:00:00Z,Yemen,YEM,7,national,NA
+2017-12-08T00:00:00Z,India,IND,NA,regional,full network
+2017-12-11T00:00:00Z,India,IND,NA,local,full network
+2017-12-12T00:00:00Z,Ethiopia,ETH,NA,regional,service-based
+2017-12-13T00:00:00Z,India,IND,1,local,full network
+2017-12-16T00:00:00Z,India,IND,NA,regional,full network
+2017-12-17T00:00:00Z,India,IND,NA,regional,full network
+2017-12-18T00:00:00Z,India,IND,3,regional,full network
+2017-12-20T00:00:00Z,Iraq,IRQ,NA,regional,full network
+2017-12-26T00:00:00Z,India,IND,NA,local,full network
+2017-12-30T00:00:00Z,Iran,IRN,14,national,service-based
+2017-12-31T00:00:00Z,India,IND,1,regional,full network
+2017-12-31T00:00:00Z,India,IND,NA,local,full network
+2017-12-31T00:00:00Z,India,IND,2,local,NA
+2009-01-01T00:00:00Z,Pakistan,PAK,3411,local,NA
+2010-05-01T00:00:00Z,Yemen,YEM,NA,national,service-based
+2018-01-01T00:00:00Z,Ethiopia,ETH,105,regional,NA
+2018-01-02T00:00:00Z,India,IND,7,local,NA
+2018-01-03T00:00:00Z,India,IND,NA,local,full network
+2018-01-03T00:00:00Z,India,IND,1,local,full network
+2018-01-08T00:00:00Z,India,IND,NA,local,NA
+2018-01-09T00:00:00Z,Philippines,PHL,1,local,NA
+2018-01-10T00:00:00Z,India,IND,NA,regional,full network
+2018-01-21T00:00:00Z,Congo - Kinshasa,COD,3,regional,full network
+2018-01-24T00:00:00Z,India,IND,NA,regional,NA
+2018-01-25T00:00:00Z,Chad,TCD,1,national,full network
+2018-01-25T00:00:00Z,India,IND,NA,regional,NA
+2018-01-27T00:00:00Z,India,IND,1,regional,full network
+2018-01-28T00:00:00Z,India,IND,NA,regional,NA
+2018-01-28T00:00:00Z,India,IND,NA,regional,NA
+2018-02-03T00:00:00Z,India,IND,1,local,NA
+2018-02-08T00:00:00Z,South Korea,KOR,3,local,full network
+2018-02-11T00:00:00Z,India,IND,NA,regional,full network
+2018-02-11T00:00:00Z,Bangladesh,BGD,0,national,NA
+2018-02-11T00:00:00Z,Bangladesh,BGD,NA,national,NA
+2018-02-12T00:00:00Z,India,IND,1,local,NA
+2018-02-16T00:00:00Z,India,IND,1,local,NA
+2018-02-18T00:00:00Z,India,IND,1,local,NA
+2018-02-25T00:00:00Z,Congo - Kinshasa,COD,0,national,full network
+2018-03-01T00:00:00Z,India,IND,1,local,NA
+2018-03-04T00:00:00Z,India,IND,2,regional,NA
+2018-03-07T00:00:00Z,Ethiopia,ETH,40,regional,full network
+2018-03-07T00:00:00Z,Sri Lanka,LKA,8,national,service-based
+2018-03-08T00:00:00Z,India,IND,1,local,full network
+2018-03-12T00:00:00Z,India,IND,1,local,NA
+2018-03-15T00:00:00Z,Kazakhstan,KAZ,NA,national,NA
+2018-03-17T00:00:00Z,India,IND,2,local,full network
+2018-03-18T00:00:00Z,India,IND,1,local,full network
+2018-03-21T00:00:00Z,Pakistan,PAK,0,local,NA
+2018-03-23T00:00:00Z,Pakistan,PAK,0,local,NA
+2018-03-24T00:00:00Z,India,IND,2,local,full network
+2018-03-24T00:00:00Z,India,IND,1,regional,NA
+2018-03-24T00:00:00Z,India,IND,1,local,NA
+2018-03-25T00:00:00Z,India,IND,NA,regional,NA
+2018-03-26T00:00:00Z,India,IND,1,local,full network
+2018-03-28T00:00:00Z,Chad,TCD,NA,national,full network
+2018-03-28T00:00:00Z,India,IND,NA,local,NA
+2018-03-29T00:00:00Z,India,IND,NA,local,NA
+2018-03-30T00:00:00Z,India,IND,1,local,full network
+2018-03-30T00:00:00Z,India,IND,NA,local,full network
+2018-03-31T00:00:00Z,Sierra Leone,SLE,1,national,full network
+2018-03-31T00:00:00Z,India,IND,NA,local,full network
+2018-04-01T00:00:00Z,India,IND,1,regional,full network
+2018-04-01T00:00:00Z,India,IND,1,regional,NA
+2018-04-02T00:00:00Z,India,IND,NA,regional,full network
+2018-04-02T00:00:00Z,India,IND,12,regional,NA
+2018-04-03T00:00:00Z,India,IND,NA,regional,NA
+2018-04-09T00:00:00Z,India,IND,NA,regional,full network
+2018-04-09T00:00:00Z,India,IND,1,local,NA
+2018-04-10T00:00:00Z,India,IND,NA,local,full network
+2018-04-10T00:00:00Z,India,IND,1,regional,full network
+2018-04-11T00:00:00Z,India,IND,NA,regional,NA
+2018-04-13T00:00:00Z,Yemen,YEM,1,local,full network
+2018-04-13T00:00:00Z,Russia,RUS,NA,national,service-based
+2018-04-14T00:00:00Z,India,IND,2,regional,full network
+2018-04-14T00:00:00Z,India,IND,0,local,NA
+2018-04-14T00:00:00Z,India,IND,1,local,NA
+2018-04-17T00:00:00Z,India,IND,NA,regional,NA
+2018-04-20T00:00:00Z,India,IND,NA,regional,NA
+2018-04-20T00:00:00Z,India,IND,NA,local,NA
+2018-04-24T00:00:00Z,India,IND,NA,local,NA
+2018-04-26T00:00:00Z,Iraq,IRQ,NA,national,service-based
+2018-04-27T00:00:00Z,Indonesia,IDN,NA,national,service-based
+2018-04-28T00:00:00Z,Turkey,TUR,NA,national,service-based
+2018-04-29T00:00:00Z,India,IND,1,regional,NA
+2018-04-30T00:00:00Z,Côte d’Ivoire,CIV,20,national,full network
+2018-04-30T00:00:00Z,India,IND,NA,regional,NA
+2018-05-04T00:00:00Z,India,IND,1,local,full network
+2018-05-05T00:00:00Z,India,IND,NA,regional,NA
+2018-05-09T00:00:00Z,India,IND,NA,local,full network
+2018-05-11T00:00:00Z,Iraq,IRQ,0,national,full network
+2018-05-11T00:00:00Z,India,IND,NA,local,full network
+2018-05-12T00:00:00Z,India,IND,NA,regional,full network
+2018-05-12T00:00:00Z,India,IND,NA,local,full network
+2018-05-12T00:00:00Z,India,IND,NA,local,full network
+2018-05-19T00:00:00Z,India,IND,1,regional,NA
+2018-05-24T00:00:00Z,India,IND,3,regional,full network
+2018-05-27T00:00:00Z,Syria,SYR,NA,national,full network
+2018-05-27T00:00:00Z,India,IND,NA,local,NA
+2018-05-31T00:00:00Z,Iraq,IRQ,NA,national,full network
+2018-06-01T00:00:00Z,India,IND,NA,local,full network
+2018-06-02T00:00:00Z,India,IND,NA,regional,NA
+2018-06-04T00:00:00Z,Mali,MLI,NA,national,service-based
+2018-06-06T00:00:00Z,India,IND,NA,regional,full network
+2018-06-08T00:00:00Z,India,IND,NA,regional,full network
+2018-06-08T00:00:00Z,India,IND,1,local,NA
+2018-06-09T00:00:00Z,India,IND,1,local,full network
+2018-06-16T00:00:00Z,India,IND,NA,local,NA
+2018-06-18T00:00:00Z,India,IND,NA,local,NA
+2018-06-21T00:00:00Z,Algeria,DZA,4,national,full network
+2018-06-22T00:00:00Z,India,IND,NA,regional,NA
+2018-06-25T00:00:00Z,India,IND,NA,regional,full network
+2018-06-25T00:00:00Z,India,IND,NA,regional,full network
+2018-06-28T00:00:00Z,India,IND,3,regional,NA
+2018-07-06T00:00:00Z,India,IND,3,local,full network
+2018-07-07T00:00:00Z,India,IND,NA,regional,NA
+2018-07-08T00:00:00Z,India,IND,1,regional,NA
+2018-07-10T00:00:00Z,India,IND,1,local,full network
+2018-07-12T00:00:00Z,Iraq,IRQ,1,national,full network
+2018-07-12T00:00:00Z,India,IND,NA,local,NA
+2018-07-13T00:00:00Z,Pakistan,PAK,1,regional,full network
+2018-07-13T00:00:00Z,Pakistan,PAK,NA,local,NA
+2018-07-14T00:00:00Z,India,IND,1,regional,full network
+2018-07-15T00:00:00Z,Iraq,IRQ,1,regional,NA
+2018-07-17T00:00:00Z,Nicaragua,NIC,1,regional,full network
+2018-07-20T00:00:00Z,Pakistan,PAK,11,regional,NA
+2018-07-20T00:00:00Z,India,IND,6,local,NA
+2018-07-22T00:00:00Z,India,IND,1,regional,NA
+2018-07-23T00:00:00Z,Philippines,PHL,NA,local,NA
+2018-07-24T00:00:00Z,India,IND,NA,local,full network
+2018-07-25T00:00:00Z,India,IND,NA,local,full network
+2018-07-25T00:00:00Z,Yemen,YEM,1,local,full network
+2018-07-25T00:00:00Z,India,IND,NA,regional,full network
+2018-07-26T00:00:00Z,India,IND,NA,local,full network
+2018-07-29T00:00:00Z,India,IND,NA,regional,NA
+2018-07-29T00:00:00Z,Mali,MLI,5,regional,service-based
+2018-08-02T00:00:00Z,India,IND,NA,regional,full network
+2018-08-04T00:00:00Z,Ethiopia,ETH,22,regional,full network
+2018-08-04T00:00:00Z,Bangladesh,BGD,1,regional,NA
+2018-08-05T00:00:00Z,India,IND,NA,regional,NA
+2018-08-09T00:00:00Z,India,IND,NA,regional,full network
+2018-08-11T00:00:00Z,Yemen,YEM,1,local,full network
+2018-08-12T00:00:00Z,India,IND,NA,local,NA
+2018-08-15T00:00:00Z,India,IND,NA,regional,NA
+2018-08-16T00:00:00Z,Ethiopia,ETH,NA,local,NA
+2018-08-17T00:00:00Z,India,IND,NA,local,full network
+2018-08-18T00:00:00Z,India,IND,NA,local,full network
+2018-08-21T00:00:00Z,India,IND,NA,regional,full network
+2018-08-23T00:00:00Z,India,IND,NA,local,full network
+2018-08-24T00:00:00Z,India,IND,NA,local,full network
+2018-08-27T00:00:00Z,India,IND,NA,local,full network
+2018-08-27T00:00:00Z,India,IND,NA,local,full network
+2018-08-29T00:00:00Z,India,IND,NA,local,full network
+2018-09-01T00:00:00Z,India,IND,2,local,full network
+2018-09-01T00:00:00Z,Iraq,IRQ,9,national,full network
+2018-09-05T00:00:00Z,India,IND,1,local,full network
+2018-09-08T00:00:00Z,India,IND,NA,local,NA
+2018-09-11T00:00:00Z,India,IND,NA,local,full network
+2018-09-12T00:00:00Z,India,IND,NA,local,full network
+2018-09-15T00:00:00Z,India,IND,NA,local,NA
+2018-09-17T00:00:00Z,Ethiopia,ETH,2,local,NA
+2018-09-19T00:00:00Z,Pakistan,PAK,2,regional,full network
+2018-09-21T00:00:00Z,India,IND,5,local,NA
+2018-09-22T00:00:00Z,India,IND,15,local,NA
+2018-09-25T00:00:00Z,Yemen,YEM,2,local,full network
+2018-09-27T00:00:00Z,India,IND,NA,local,NA
+2018-09-30T00:00:00Z,Nigeria,NGA,2,local,NA
+2018-10-04T00:00:00Z,Russia,RUS,13,regional,NA
+2018-10-06T00:00:00Z,India,IND,1,local,full network
+2018-10-08T00:00:00Z,India,IND,NA,local,NA
+2018-10-10T00:00:00Z,Ethiopia,ETH,NA,local,NA
+2018-10-10T00:00:00Z,India,IND,NA,regional,NA
+2018-10-11T00:00:00Z,India,IND,NA,local,NA
+2018-10-15T00:00:00Z,Yemen,YEM,NA,local,NA
+2018-10-16T00:00:00Z,Iraq,IRQ,6,national,full network
+2018-10-16T00:00:00Z,India,IND,NA,local,NA
+2018-10-17T00:00:00Z,India,IND,NA,local,NA
+2018-10-20T00:00:00Z,Cameroon,CMR,2,regional,NA
+2018-10-21T00:00:00Z,India,IND,NA,local,full network
+2018-10-21T00:00:00Z,India,IND,NA,local,NA
+2018-10-24T00:00:00Z,India,IND,NA,local,NA
+2018-10-26T00:00:00Z,India,IND,NA,local,NA
+2018-10-28T00:00:00Z,Pakistan,PAK,NA,local,service-based
+2018-10-30T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2018-10-30T00:00:00Z,Pakistan,PAK,1,local,NA
+2018-11-01T00:00:00Z,Pakistan,PAK,1,regional,full network
+2018-11-01T00:00:00Z,India,IND,NA,local,NA
+2018-11-01T00:00:00Z,India,IND,NA,local,NA
+2018-11-09T00:00:00Z,India,IND,NA,local,NA
+2018-11-10T00:00:00Z,India,IND,NA,local,NA
+2018-11-17T00:00:00Z,India,IND,NA,local,NA
+2018-11-18T00:00:00Z,India,IND,1,local,full network
+2018-11-20T00:00:00Z,India,IND,NA,local,NA
+2018-11-21T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2018-11-21T00:00:00Z,Bangladesh,BGD,1,national,service-based
+2018-11-23T00:00:00Z,India,IND,NA,local,full network
+2018-11-25T00:00:00Z,India,IND,NA,local,NA
+2018-11-27T00:00:00Z,India,IND,NA,local,NA
+2018-11-28T00:00:00Z,India,IND,NA,local,full network
+2018-12-03T00:00:00Z,India,IND,NA,local,full network
+2018-12-04T00:00:00Z,Yemen,YEM,NA,local,NA
+2018-12-08T00:00:00Z,India,IND,NA,local,NA
+2018-12-08T00:00:00Z,Togo,TGO,4,national,NA
+2018-12-13T00:00:00Z,India,IND,NA,local,NA
+2018-12-15T00:00:00Z,India,IND,9,local,NA
+2018-12-21T00:00:00Z,Sudan,SDN,61,national,service-based
+2018-12-26T00:00:00Z,India,IND,NA,regional,NA
+2018-12-28T00:00:00Z,Bangladesh,BGD,3,national,NA
+2018-12-29T00:00:00Z,India,IND,NA,regional,full network
+2018-12-31T00:00:00Z,Congo - Kinshasa,COD,20,national,full network
+2018-03-28T00:00:00Z,Chad,TCD,472,national,service-based
+2018-10-17T00:00:00Z,Yemen,YEM,151,local,full network
+2018-12-20T00:00:00Z,Jordan,JOR,21,national,service-based
+2018-12-21T00:00:00Z,Sudan,SDN,67,national,service-based
+2018-12-31T00:00:00Z,Congo - Kinshasa,COD,20,national,full network
+2019-01-01T00:00:00Z,India,IND,1,local,full network
+2019-01-02T00:00:00Z,India,IND,NA,local,full network
+2019-01-03T00:00:00Z,India,IND,NA,local,full network
+2019-01-05T00:00:00Z,India,IND,NA,local,full network
+2019-01-07T00:00:00Z,Gabon,GAB,1,national,full and service-based
+2019-01-08T00:00:00Z,India,IND,4,regional,full network
+2019-01-09T00:00:00Z,India,IND,NA,local,full network
+2019-01-12T00:00:00Z,India,IND,NA,regional,full network
+2019-01-15T00:00:00Z,Zimbabwe,ZWE,9,national,full and service-based
+2019-01-21T00:00:00Z,India,IND,NA,regional,full network
+2019-01-21T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-01-22T00:00:00Z,India,IND,NA,local,full network
+2019-01-23T00:00:00Z,India,IND,NA,local,full network
+2019-01-24T00:00:00Z,India,IND,1,local,full network
+2019-01-25T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-01-26T00:00:00Z,India,IND,1,regional,full network
+2019-01-26T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-01-29T00:00:00Z,Yemen,YEM,NA,local,full network
+2019-02-01T00:00:00Z,India,IND,NA,regional,full network
+2019-02-03T00:00:00Z,India,IND,1,local,full network
+2019-02-06T00:00:00Z,India,IND,NA,local,full network
+2019-02-10T00:00:00Z,India,IND,NA,local,full network
+2019-02-12T00:00:00Z,India,IND,5,regional,full network
+2019-02-12T00:00:00Z,India,IND,NA,local,full network
+2019-02-12T00:00:00Z,India,IND,1,local,full network
+2019-02-12T00:00:00Z,India,IND,NA,local,full network
+2019-02-13T00:00:00Z,India,IND,1,local,full network
+2019-02-14T00:00:00Z,India,IND,1,regional,full network
+2019-02-15T00:00:00Z,India,IND,5,regional,full network
+2019-02-18T00:00:00Z,India,IND,1,local,full network
+2019-02-21T00:00:00Z,Algeria,DZA,NA,national,service-based
+2019-02-22T00:00:00Z,Algeria,DZA,1,national,full network
+2019-02-22T00:00:00Z,India,IND,NA,local,full network
+2019-02-23T00:00:00Z,India,IND,6,local,full network
+2019-02-23T00:00:00Z,India,IND,NA,local,full and service-based
+2019-02-28T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-03-01T00:00:00Z,Algeria,DZA,NA,national,full network
+2019-03-01T00:00:00Z,India,IND,NA,regional,full network
+2019-03-01T00:00:00Z,India,IND,NA,NA,full network
+2019-03-03T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-03-05T00:00:00Z,India,IND,NA,local,full network
+2019-03-07T00:00:00Z,India,IND,NA,local,full network
+2019-03-10T00:00:00Z,India,IND,NA,local,full network
+2019-03-11T00:00:00Z,Yemen,YEM,NA,local,service-based
+2019-03-16T00:00:00Z,India,IND,NA,local,full network
+2019-03-16T00:00:00Z,Russia,RUS,NA,local,full network
+2019-03-18T00:00:00Z,India,IND,NA,NA,full network
+2019-03-19T00:00:00Z,India,IND,NA,regional,full network
+2019-03-20T00:00:00Z,India,IND,NA,local,full network
+2019-03-21T00:00:00Z,India,IND,1,local,full network
+2019-03-22T00:00:00Z,India,IND,2,local,service-based
+2019-03-23T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2019-03-26T00:00:00Z,Russia,RUS,6,local,full network
+2019-03-28T00:00:00Z,India,IND,NA,local,full network
+2019-03-28T00:00:00Z,India,IND,NA,local,full network
+2019-04-01T00:00:00Z,India,IND,NA,local,full network
+2019-04-01T00:00:00Z,India,IND,1,regional,full network
+2019-04-03T00:00:00Z,India,IND,1,local,full network
+2019-04-05T00:00:00Z,India,IND,1,regional,full network
+2019-04-06T00:00:00Z,India,IND,NA,local,full network
+2019-04-07T00:00:00Z,India,IND,8,local,full network
+2019-04-07T00:00:00Z,Sudan,SDN,1,local,service-based
+2019-04-09T00:00:00Z,India,IND,NA,regional,full network
+2019-04-11T00:00:00Z,India,IND,NA,regional,full network
+2019-04-11T00:00:00Z,India,IND,2,NA,full network
+2019-04-12T00:00:00Z,Yemen,YEM,NA,local,full network
+2019-04-16T00:00:00Z,India,IND,1,local,full network
+2019-04-17T00:00:00Z,Yemen,YEM,14,local,full network
+2019-04-18T00:00:00Z,India,IND,1,regional,full network
+2019-04-20T00:00:00Z,India,IND,NA,local,full network
+2019-04-21T00:00:00Z,Sri Lanka,LKA,9,national,service-based
+2019-04-22T00:00:00Z,India,IND,2,regional,service-based
+2019-04-23T00:00:00Z,Tajikistan,TJK,15,national,service-based
+2019-04-24T00:00:00Z,India,IND,1,regional,service-based
+2019-04-25T00:00:00Z,India,IND,NA,local,full network
+2019-04-27T00:00:00Z,Benin,BEN,2,national,full and service-based
+2019-04-27T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-04-27T00:00:00Z,Yemen,YEM,1,local,full network
+2019-04-29T00:00:00Z,India,IND,1,regional,full network
+2019-04-30T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-05-01T00:00:00Z,Benin,BEN,1,national,full and service-based
+2019-05-02T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-05-03T00:00:00Z,India,IND,4,local,full network
+2019-05-03T00:00:00Z,India,IND,NA,local,full network
+2019-05-05T00:00:00Z,Sri Lanka,LKA,1,national,service-based
+2019-05-06T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-05-09T00:00:00Z,Kazakhstan,KAZ,10,national,service-based
+2019-05-10T00:00:00Z,India,IND,NA,local,full network
+2019-05-11T00:00:00Z,India,IND,3,local,full network
+2019-05-12T00:00:00Z,India,IND,NA,local,full network
+2019-05-12T00:00:00Z,India,IND,NA,local,full network
+2019-05-13T00:00:00Z,Sri Lanka,LKA,4,national,service-based
+2019-05-14T00:00:00Z,Iraq,IRQ,8,national,full network
+2019-05-15T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-05-16T00:00:00Z,India,IND,NA,local,full network
+2019-05-16T00:00:00Z,India,IND,8,local,full network
+2019-05-17T00:00:00Z,India,IND,NA,local,full network
+2019-05-18T00:00:00Z,India,IND,NA,local,full network
+2019-05-18T00:00:00Z,United Kingdom,GBR,NA,local,service-based
+2019-05-20T00:00:00Z,China,CHN,11,regional,full and service-based
+2019-05-21T00:00:00Z,Tajikistan,TJK,8,national,full and service-based
+2019-05-22T00:00:00Z,India,IND,NA,local,full network
+2019-05-22T00:00:00Z,Indonesia,IDN,3,national,service-based
+2019-05-22T00:00:00Z,Malawi,MWI,NA,national,full network
+2019-05-24T00:00:00Z,India,IND,1,regional,full network
+2019-05-27T00:00:00Z,Iraq,IRQ,4,national,full network
+2019-05-29T00:00:00Z,India,IND,NA,local,full network
+2019-05-30T00:00:00Z,India,IND,NA,local,full network
+2019-05-31T00:00:00Z,India,IND,NA,local,full network
+2019-05-31T00:00:00Z,India,IND,NA,local,full network
+2019-06-01T00:00:00Z,Iraq,IRQ,14,national,full network
+2019-06-03T00:00:00Z,India,IND,NA,local,full network
+2019-06-03T00:00:00Z,Sudan,SDN,36,national,full network
+2019-06-05T00:00:00Z,India,IND,NA,local,full network
+2019-06-07T00:00:00Z,India,IND,NA,local,full network
+2019-06-07T00:00:00Z,Liberia,LBR,1,national,full and service-based
+2019-06-08T00:00:00Z,India,IND,NA,local,full network
+2019-06-09T00:00:00Z,India,IND,NA,local,full network
+2019-06-09T00:00:00Z,Kazakhstan,KAZ,1,national,service-based
+2019-06-10T00:00:00Z,Ethiopia,ETH,8,national,full network
+2019-06-10T00:00:00Z,India,IND,NA,local,full network
+2019-06-11T00:00:00Z,India,IND,NA,local,full network
+2019-06-11T00:00:00Z,India,IND,NA,local,full network
+2019-06-11T00:00:00Z,Kazakhstan,KAZ,NA,national,service-based
+2019-06-12T00:00:00Z,India,IND,NA,local,full network
+2019-06-09T00:00:00Z,Syria,SYR,21,national,full network
+2019-06-14T00:00:00Z,India,IND,NA,local,full and service-based
+2019-06-15T00:00:00Z,Eritrea,ERI,10,national,service-based
+2019-06-16T00:00:00Z,Algeria,DZA,4,national,service-based
+2019-06-17T00:00:00Z,India,IND,NA,local,full network
+2019-06-18T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-06-19T00:00:00Z,India,IND,NA,local,full network
+2019-06-20T00:00:00Z,India,IND,NA,local,full network
+2019-06-20T00:00:00Z,Algeria,DZA,5,national,full network
+2019-06-20T00:00:00Z,Yemen,YEM,NA,local,full network
+2019-06-22T00:00:00Z,Cameroon,CMR,NA,national,full network
+2019-06-22T00:00:00Z,Ethiopia,ETH,13,national,full network
+2019-06-22T00:00:00Z,Ethiopia,ETH,61,national,service-based
+2019-06-22T00:00:00Z,Myanmar (Burma),MMR,71,regional,full network
+2019-06-22T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2019-06-23T00:00:00Z,India,IND,NA,local,full network
+2019-06-23T00:00:00Z,Mauritania,MRT,11,national,full network
+2019-06-26T00:00:00Z,Iran,IRN,NA,national,full network
+2019-06-28T00:00:00Z,India,IND,NA,local,full network
+2019-06-30T00:00:00Z,India,IND,NA,local,full network
+2019-07-01T00:00:00Z,India,IND,1,local,full network
+2019-07-02T00:00:00Z,India,IND,NA,local,full network
+2019-07-05T00:00:00Z,India,IND,NA,local,full network
+2019-07-05T00:00:00Z,India,IND,NA,local,full network
+2019-07-08T00:00:00Z,India,IND,NA,local,full network
+2019-07-08T00:00:00Z,Yemen,YEM,NA,local,full network
+2019-07-16T00:00:00Z,Ethiopia,ETH,13,regional,full network
+2019-07-16T00:00:00Z,India,IND,1,local,full network
+2019-07-17T00:00:00Z,India,IND,NA,local,full network
+2019-07-18T00:00:00Z,India,IND,NA,local,full network
+2019-07-19T00:00:00Z,India,IND,NA,local,full network
+2019-07-25T00:00:00Z,India,IND,3,local,full network
+2019-07-27T00:00:00Z,India,IND,NA,local,full network
+2019-07-28T00:00:00Z,Syria,SYR,10,national,full network
+2019-07-30T00:00:00Z,India,IND,NA,local,full network
+2019-08-02T00:00:00Z,India,IND,NA,local,full network
+2019-08-03T00:00:00Z,India,IND,NA,local,full network
+2019-08-03T00:00:00Z,India,IND,175,regional,full network
+2019-08-03T00:00:00Z,Russia,RUS,NA,local,full network
+2019-08-08T00:00:00Z,India,IND,NA,local,full network
+2019-08-13T00:00:00Z,India,IND,1,local,full network
+2019-08-15T00:00:00Z,Pakistan,PAK,NA,local,full network
+2019-08-22T00:00:00Z,Indonesia,IDN,14,regional,full network
+2019-08-25T00:00:00Z,India,IND,1,local,full network
+2019-08-27T00:00:00Z,Iraq,IRQ,6,national,full network
+2019-09-02T00:00:00Z,Bangladesh,BGD,7,local,full network
+2019-09-07T00:00:00Z,Pakistan,PAK,NA,NA,full network
+2019-09-08T00:00:00Z,Pakistan,PAK,2,NA,full network
+2019-09-10T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2019-09-14T00:00:00Z,Algeria,DZA,1,national,full network
+2019-09-22T00:00:00Z,Egypt,EGY,1,national,service-based
+2019-09-25T00:00:00Z,Indonesia,IDN,3,local,full network
+2019-10-02T00:00:00Z,Iraq,IRQ,50,national,service-based
+2019-10-03T00:00:00Z,Iraq,IRQ,7,national,full network
+2019-10-07T00:00:00Z,Ecuador,ECU,NA,national,service-based
+2019-10-11T00:00:00Z,India,IND,NA,local,full network
+2019-10-11T00:00:00Z,Turkey,TUR,NA,national,service-based
+2019-10-12T00:00:00Z,Ecuador,ECU,NA,national,full network
+2019-10-12T00:00:00Z,Yemen,YEM,4,local,full network
+2019-10-15T00:00:00Z,Turkey,TUR,NA,national,service-based
+2019-10-22T00:00:00Z,Pakistan,PAK,NA,NA,full network
+2019-10-25T00:00:00Z,Iraq,IRQ,1,national,full and service-based
+2019-11-04T00:00:00Z,Iraq,IRQ,7,national,full network
+2019-11-06T00:00:00Z,Yemen,YEM,NA,regional,full network
+2019-11-09T00:00:00Z,India,IND,NA,local,full and service-based
+2019-11-10T00:00:00Z,India,IND,NA,local,full network
+2019-11-16T00:00:00Z,Iran,IRN,7,national,full network
+2019-11-16T00:00:00Z,Iran,IRN,8,national,full network
+2019-11-16T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2019-11-22T00:00:00Z,Yemen,YEM,NA,local,full network
+2019-12-10T00:00:00Z,India,IND,NA,regional,full network
+2019-12-10T00:00:00Z,India,IND,NA,regional,full network
+2019-12-11T00:00:00Z,India,IND,NA,regional,full network
+2019-12-12T00:00:00Z,India,IND,NA,regional,full network
+2019-12-13T00:00:00Z,India,IND,NA,local,full network
+2019-12-15T00:00:00Z,India,IND,NA,regional,full network
+2019-12-18T00:00:00Z,India,IND,NA,regional,full network
+2019-12-19T00:00:00Z,India,IND,NA,local,full network
+2019-12-20T00:00:00Z,India,IND,NA,regional,full network
+2019-12-22T00:00:00Z,India,IND,NA,regional,full network
+2019-12-22T00:00:00Z,India,IND,NA,local,full and service-based
+2019-12-27T00:00:00Z,India,IND,NA,regional,full network
+2019-12-31T00:00:00Z,Bangladesh,BGD,2,national,full network
+2016-06-12T00:00:00Z,Pakistan,PAK,NA,local,full network
+2019-06-22T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2019-08-03T00:00:00Z,India,IND,NA,local,full network
+2019-08-05T00:00:00Z,India,IND,NA,local,full network
+2019-09-10T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2020-01-01T00:00:00Z,India,IND,NA,local,full network
+2020-01-02T00:00:00Z,India,IND,NA,local,full network
+2020-01-03T00:00:00Z,Azerbaijan,AZE,NA,NA,full and service-based
+2020-01-03T00:00:00Z,Ethiopia,ETH,NA,local,full and service-based
+2020-01-04T00:00:00Z,India,IND,NA,local,full network
+2020-01-05T00:00:00Z,Venezuela,VEN,NA,national,service-based
+2020-01-08T00:00:00Z,Ethiopia,ETH,NA,local,full network
+2020-01-15T00:00:00Z,India,IND,NA,local,full network
+2020-01-22T00:00:00Z,Togo,TGO,NA,national,full network
+2020-01-25T00:00:00Z,India,IND,NA,local,full network
+2020-01-27T00:00:00Z,India,IND,NA,local,full network
+2020-01-30T00:00:00Z,Yemen,YEM,NA,regional,full network
+2020-01-31T00:00:00Z,India,IND,NA,local,full network
+2020-02-03T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2020-02-08T00:00:00Z,Iran,IRN,NA,national,full network
+2020-02-09T00:00:00Z,India,IND,NA,local,full network
+2020-02-11T00:00:00Z,India,IND,NA,local,full network
+2020-02-16T00:00:00Z,Vietnam,VNM,NA,national,service-based
+2020-02-18T00:00:00Z,India,IND,NA,local,full network
+2020-02-19T00:00:00Z,India,IND,NA,local,full network
+2020-02-21T00:00:00Z,Togo,TGO,NA,regional,service-based
+2020-02-22T00:00:00Z,India,IND,NA,local,full network
+2020-02-22T00:00:00Z,Togo,TGO,NA,national,service-based
+2020-02-23T00:00:00Z,India,IND,NA,local,full network
+2020-02-27T00:00:00Z,Turkey,TUR,NA,national,service-based
+2020-02-28T00:00:00Z,India,IND,NA,local,full network
+2020-03-02T00:00:00Z,Kenya,KEN,NA,local,full network
+2020-03-09T00:00:00Z,India,IND,NA,local,full network
+2020-03-15T00:00:00Z,India,IND,NA,local,full network
+2020-03-16T00:00:00Z,India,IND,NA,local,full network
+2020-03-21T00:00:00Z,Guinea,GIN,NA,national,full and service-based
+2020-04-04T00:00:00Z,India,IND,NA,local,full network
+2020-04-07T00:00:00Z,India,IND,NA,local,full network
+2020-04-10T00:00:00Z,India,IND,NA,local,full network
+2020-04-11T00:00:00Z,India,IND,NA,local,full network
+2020-04-17T00:00:00Z,India,IND,NA,local,full network
+2020-04-21T00:00:00Z,India,IND,NA,local,full network
+2020-04-22T00:00:00Z,India,IND,NA,local,full network
+2020-04-25T00:00:00Z,India,IND,NA,local,full network
+2020-04-26T00:00:00Z,India,IND,NA,local,full network
+2020-04-27T00:00:00Z,India,IND,NA,local,full network
+2020-04-28T00:00:00Z,India,IND,NA,local,full network
+2020-05-02T00:00:00Z,India,IND,NA,local,full network
+2020-05-02T00:00:00Z,India,IND,NA,local,full network
+2020-05-05T00:00:00Z,India,IND,NA,local,full network
+2020-05-05T00:00:00Z,India,IND,NA,local,full network
+2020-05-06T00:00:00Z,India,IND,NA,local,full network
+2020-05-06T00:00:00Z,India,IND,NA,local,full network
+2020-05-12T00:00:00Z,India,IND,NA,local,full network
+2020-05-12T00:00:00Z,India,IND,NA,local,full network
+2020-05-13T00:00:00Z,India,IND,NA,local,full network
+2020-05-14T00:00:00Z,India,IND,NA,local,full network
+2020-05-14T00:00:00Z,Sudan,SDN,NA,local,full network
+2020-05-18T00:00:00Z,Pakistan,PAK,NA,regional,service-based
+2020-05-18T00:00:00Z,Pakistan,PAK,NA,regional,service-based
+2020-05-19T00:00:00Z,India,IND,NA,local,full network
+2020-05-19T00:00:00Z,India,IND,NA,local,full network
+2020-05-20T00:00:00Z,Burundi,BDI,NA,national,service-based
+2020-05-25T00:00:00Z,India,IND,NA,local,full network
+2020-05-30T00:00:00Z,India,IND,NA,local,full network
+2020-05-31T00:00:00Z,India,IND,NA,local,full network
+2020-05-31T00:00:00Z,Venezuela,VEN,NA,regional,service-based
+2020-06-02T00:00:00Z,India,IND,NA,local,full network
+2020-06-03T00:00:00Z,India,IND,NA,local,full network
+2020-06-07T00:00:00Z,India,IND,NA,local,full network
+2020-06-10T00:00:00Z,India,IND,NA,local,full network
+2020-06-11T00:00:00Z,Ecuador,ECU,NA,regional,service-based
+2020-06-13T00:00:00Z,India,IND,NA,local,full network
+2020-06-16T00:00:00Z,India,IND,NA,local,full network
+2020-06-18T00:00:00Z,India,IND,NA,local,full network
+2020-06-18T00:00:00Z,India,IND,NA,local,full network
+2020-06-18T00:00:00Z,India,IND,NA,local,full network
+2020-06-19T00:00:00Z,Belarus,BLR,NA,national,full and service-based
+2020-06-19T00:00:00Z,Mali,MLI,NA,local,full network
+2020-06-20T00:00:00Z,India,IND,NA,local,full network
+2020-06-21T00:00:00Z,India,IND,NA,local,full network
+2020-06-21T00:00:00Z,Syria,SYR,NA,national,full network
+2020-06-22T00:00:00Z,Chad,TCD,NA,national,service-based
+2020-06-23T00:00:00Z,India,IND,NA,local,full network
+2020-06-25T00:00:00Z,India,IND,NA,local,full network
+2020-06-25T00:00:00Z,India,IND,NA,local,full network
+2020-06-29T00:00:00Z,India,IND,NA,local,full network
+2020-06-30T00:00:00Z,Ethiopia,ETH,NA,national,full network
+2020-06-30T00:00:00Z,India,IND,NA,local,full network
+2020-06-30T00:00:00Z,India,IND,NA,local,full network
+2020-07-01T00:00:00Z,Jordan,JOR,NA,national,service-based
+2020-07-04T00:00:00Z,India,IND,NA,local,full network
+2020-07-07T00:00:00Z,India,IND,NA,local,full network
+2020-07-08T00:00:00Z,India,IND,NA,local,full network
+2020-07-08T00:00:00Z,Yemen,YEM,NA,local,full network
+2020-07-10T00:00:00Z,Mali,MLI,NA,local,full and service-based
+2020-07-12T00:00:00Z,India,IND,NA,local,full network
+2020-07-13T00:00:00Z,India,IND,NA,local,full network
+2020-07-17T00:00:00Z,India,IND,NA,local,full network
+2020-07-18T00:00:00Z,India,IND,NA,local,full network
+2020-07-22T00:00:00Z,Yemen,YEM,NA,regional,full network
+2020-07-29T00:00:00Z,Jordan,JOR,NA,regional,full and service-based
+2020-08-04T00:00:00Z,Chad,TCD,NA,national,service-based
+2020-08-09T00:00:00Z,Belarus,BLR,NA,national,full and service-based
+2020-08-15T00:00:00Z,India,IND,NA,local,full network
+2020-08-17T00:00:00Z,India,IND,NA,local,full network
+2020-08-19T00:00:00Z,India,IND,NA,local,full network
+2020-08-19T00:00:00Z,Yemen,YEM,NA,local,full network
+2020-08-22T00:00:00Z,India,IND,NA,local,full network
+2020-08-22T00:00:00Z,Syria,SYR,NA,regional,full network
+2020-08-28T00:00:00Z,India,IND,NA,local,full network
+2020-08-29T00:00:00Z,India,IND,NA,local,full network
+2020-08-30T00:00:00Z,India,IND,NA,local,full network
+2020-09-04T00:00:00Z,India,IND,NA,local,full network
+2020-09-12T00:00:00Z,Algeria,DZA,NA,national,full and service-based
+2020-09-13T00:00:00Z,India,IND,NA,local,full network
+2020-09-13T00:00:00Z,Sudan,SDN,NA,national,full network
+2020-09-15T00:00:00Z,India,IND,NA,local,full network
+2020-09-16T00:00:00Z,India,IND,NA,local,full network
+2020-09-21T00:00:00Z,India,IND,NA,local,full network
+2020-09-24T00:00:00Z,Yemen,YEM,NA,local,full network
+2020-09-26T00:00:00Z,India,IND,NA,local,full network
+2020-09-27T00:00:00Z,India,IND,NA,local,full network
+2020-09-30T00:00:00Z,India,IND,NA,local,full network
+2020-10-05T00:00:00Z,Kyrgyzstan,KGZ,NA,regional,full network
+2020-10-06T00:00:00Z,India,IND,NA,local,full network
+2020-10-10T00:00:00Z,India,IND,NA,local,full network
+2020-10-10T00:00:00Z,India,IND,NA,local,full network
+2020-10-14T00:00:00Z,India,IND,NA,local,full network
+2020-10-15T00:00:00Z,Yemen,YEM,NA,local,full network
+2020-10-16T00:00:00Z,India,IND,NA,local,full network
+2020-10-16T00:00:00Z,India,IND,NA,local,full network
+2020-10-17T00:00:00Z,Tanzania,TZA,NA,regional,full and service-based
+2020-10-19T00:00:00Z,India,IND,NA,local,full network
+2020-10-20T00:00:00Z,India,IND,NA,local,full network
+2020-10-21T00:00:00Z,India,IND,NA,local,full network
+2020-10-22T00:00:00Z,Egypt,EGY,NA,national,service-based
+2020-10-23T00:00:00Z,Guinea,GIN,NA,regional,full and service-based
+2020-10-26T00:00:00Z,India,IND,NA,local,full network
+2020-10-30T00:00:00Z,India,IND,NA,local,full network
+2020-11-01T00:00:00Z,India,IND,NA,local,full network
+2020-11-01T00:00:00Z,India,IND,NA,local,full network
+2020-11-04T00:00:00Z,Ethiopia,ETH,NA,regional,full network
+2020-11-04T00:00:00Z,Ethiopia,ETH,NA,local,full network
+2020-11-05T00:00:00Z,India,IND,NA,local,full network
+2020-11-10T00:00:00Z,India,IND,NA,local,full network
+2020-11-12T00:00:00Z,India,IND,NA,local,full network
+2020-11-13T00:00:00Z,India,IND,NA,local,full network
+2020-11-19T00:00:00Z,India,IND,NA,local,full network
+2020-11-21T00:00:00Z,Uganda,UGA,NA,national,service-based
+2020-11-27T00:00:00Z,Cuba,CUB,NA,national,service-based
+2020-12-07T00:00:00Z,India,IND,NA,local,full network
+2020-12-08T00:00:00Z,Iraq,IRQ,NA,local,full and service-based
+2020-12-09T00:00:00Z,India,IND,NA,local,full network
+2020-12-09T00:00:00Z,India,IND,NA,local,full network
+2020-12-18T00:00:00Z,Kenya,KEN,NA,local,full network
+2020-12-25T00:00:00Z,India,IND,NA,local,full network
+2020-12-25T00:00:00Z,India,IND,NA,local,full network
+2020-12-31T00:00:00Z,Jordan,JOR,NA,national,service-based
+2016-06-12T00:00:00Z,Pakistan,PAK,NA,local,full network
+2019-06-22T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2019-08-05T00:00:00Z,India,IND,NA,local,full network
+2020-02-03T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2020-11-04T00:00:00Z,Ethiopia,ETH,NA,regional,full network
+2020-11-21T00:00:00Z,Uganda,UGA,NA,national,service-based
+2020-12-30T00:00:00Z,India,IND,NA,local,full network
+2020-12-31T00:00:00Z,Jordan,JOR,NA,national,service-based
+2021-01-01T00:00:00Z,India,IND,NA,regional,full network
+2021-01-11T00:00:00Z,Tajikistan,TJK,NA,regional,service-based
+2021-01-12T00:00:00Z,Uganda,UGA,NA,national,service-based
+2021-01-13T00:00:00Z,Uganda,UGA,NA,national,full network
+2021-01-23T00:00:00Z,India,IND,NA,local,full network
+2021-01-25T00:00:00Z,Iran,IRN,NA,national,service-based
+2021-01-26T00:00:00Z,India,IND,NA,local,full network
+2021-01-26T00:00:00Z,India,IND,NA,regional,full network
+2021-01-27T00:00:00Z,Cuba,CUB,NA,national,full network
+2021-01-27T00:00:00Z,India,IND,NA,local,full network
+2021-01-29T00:00:00Z,India,IND,NA,local,full network
+2021-01-29T00:00:00Z,India,IND,NA,local,full network
+2021-01-29T00:00:00Z,India,IND,NA,local,full network
+2021-01-29T00:00:00Z,India,IND,NA,local,full network
+2021-02-01T00:00:00Z,Myanmar (Burma),MMR,NA,national,full network
+2021-02-04T00:00:00Z,Myanmar (Burma),MMR,NA,national,service-based
+2021-02-05T00:00:00Z,India,IND,NA,local,full network
+2021-02-06T00:00:00Z,India,IND,NA,local,full network
+2021-02-06T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-02-12T00:00:00Z,Cuba,CUB,NA,local,full network
+2021-02-14T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-02-18T00:00:00Z,India,IND,NA,local,full network
+2021-02-22T00:00:00Z,Gabon,GAB,NA,NA,full network
+2021-02-24T00:00:00Z,India,IND,NA,local,full network
+2021-02-24T00:00:00Z,Iran,IRN,NA,local,full network
+2021-02-24T00:00:00Z,Niger,NER,NA,regional,full network
+2021-02-27T00:00:00Z,Chad,TCD,NA,regional,full network
+2021-03-04T00:00:00Z,Senegal,SEN,NA,national,service-based
+2021-03-05T00:00:00Z,Chad,TCD,NA,local,full network
+2021-03-08T00:00:00Z,India,IND,NA,local,full network
+2021-03-10T00:00:00Z,Russia,RUS,NA,national,full and service-based
+2021-03-10T00:00:00Z,India,IND,NA,local,full network
+2021-03-13T00:00:00Z,India,IND,NA,local,full network
+2021-03-14T00:00:00Z,Oman,OMN,NA,regional,service-based
+2021-03-15T00:00:00Z,Jordan,JOR,NA,regional,service-based
+2021-03-15T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-03-16T00:00:00Z,China,CHN,NA,regional,service-based
+2021-03-20T00:00:00Z,Congo - Brazzaville,COG,NA,national,full network
+2021-03-21T00:00:00Z,India,IND,NA,local,full network
+2021-03-26T00:00:00Z,Bangladesh,BGD,NA,regional,service-based
+2021-03-27T00:00:00Z,India,IND,NA,local,full network
+2021-03-27T00:00:00Z,Kazakhstan,KAZ,NA,regional,service-based
+2021-03-28T00:00:00Z,Kazakhstan,KAZ,NA,regional,full and service-based
+2021-04-01T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-04-02T00:00:00Z,India,IND,NA,local,full network
+2021-04-03T00:00:00Z,Jordan,JOR,NA,regional,full and service-based
+2021-04-08T00:00:00Z,India,IND,NA,local,full network
+2021-04-08T00:00:00Z,India,IND,NA,local,full network
+2021-04-09T00:00:00Z,India,IND,NA,local,full network
+2021-04-10T00:00:00Z,India,IND,NA,local,full network
+2021-04-11T00:00:00Z,India,IND,NA,local,full network
+2021-04-16T00:00:00Z,Pakistan,PAK,NA,national,service-based
+2021-04-19T00:00:00Z,India,IND,NA,local,full network
+2021-04-19T00:00:00Z,India,IND,NA,local,full network
+2021-05-04T00:00:00Z,India,IND,NA,local,full network
+2021-05-06T00:00:00Z,India,IND,NA,local,full network
+2021-05-11T00:00:00Z,Iraq,IRQ,NA,regional,full network
+2021-05-12T00:00:00Z,Palestinian Territories,PSE,NA,local,full network
+2021-05-14T00:00:00Z,Cuba,CUB,NA,regional,full network
+2021-05-16T00:00:00Z,Ethiopia,ETH,NA,regional,service-based
+2021-05-17T00:00:00Z,India,IND,NA,local,full network
+2021-05-25T00:00:00Z,Myanmar (Burma),MMR,NA,regional,service-based
+2021-05-28T00:00:00Z,India,IND,NA,local,full network
+2021-05-31T00:00:00Z,Syria,SYR,NA,national,full network
+2021-06-04T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-06-04T00:00:00Z,Nigeria,NGA,NA,regional,service-based
+2021-06-19T00:00:00Z,Sudan,SDN,NA,national,full network
+2021-06-20T00:00:00Z,Iran,IRN,NA,local,full network
+2021-06-20T00:00:00Z,Algeria,DZA,NA,national,full network
+2021-06-21T00:00:00Z,India,IND,NA,local,full network
+2021-06-23T00:00:00Z,India,IND,NA,local,full network
+2021-06-24T00:00:00Z,Jordan,JOR,NA,regional,service-based
+2021-06-25T00:00:00Z,India,IND,NA,local,full network
+2021-06-29T00:00:00Z,India,IND,NA,local,full network
+2021-06-29T00:00:00Z,Eswatini,SWZ,NA,regional,full network
+2021-06-30T00:00:00Z,India,IND,NA,local,full network
+2021-07-01T00:00:00Z,India,IND,NA,local,full network
+2021-07-07T00:00:00Z,India,IND,NA,local,full network
+2021-07-07T00:00:00Z,India,IND,NA,NA,full network
+2021-07-08T00:00:00Z,India,IND,NA,local,full network
+2021-07-09T00:00:00Z,India,IND,NA,local,full network
+2021-07-11T00:00:00Z,India,IND,NA,local,full network
+2021-07-11T00:00:00Z,Cuba,CUB,NA,regional,full and service-based
+2021-07-14T00:00:00Z,India,IND,NA,local,full network
+2021-07-18T00:00:00Z,India,IND,NA,local,full network
+2021-07-18T00:00:00Z,Iran,IRN,NA,local,full network
+2021-07-20T00:00:00Z,India,IND,NA,local,full network
+2021-07-22T00:00:00Z,India,IND,NA,local,full network
+2021-07-25T00:00:00Z,Iraq,IRQ,NA,regional,full network
+2021-07-31T00:00:00Z,India,IND,NA,local,full network
+2021-08-01T00:00:00Z,India,IND,NA,local,full network
+2021-08-01T00:00:00Z,Syria,SYR,NA,regional,full network
+2021-08-07T00:00:00Z,India,IND,NA,local,full network
+2021-08-12T00:00:00Z,Zambia,ZMB,NA,regional,service-based
+2021-08-15T00:00:00Z,India,IND,NA,local,full network
+2021-08-20T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-08-21T00:00:00Z,Indonesia,IDN,NA,regional,full network
+2021-08-24T00:00:00Z,India,IND,NA,local,full network
+2021-08-25T00:00:00Z,Indonesia,IDN,NA,regional,full network
+2021-08-29T00:00:00Z,South Sudan,SSD,NA,regional,service-based
+2021-09-01T00:00:00Z,India,IND,NA,local,full network
+2021-09-02T00:00:00Z,India,IND,NA,local,full network
+2021-09-02T00:00:00Z,Nigeria,NGA,NA,local,full network
+2021-09-03T00:00:00Z,India,IND,NA,local,full network
+2021-09-03T00:00:00Z,Afghanistan,AFG,NA,local,full network
+2021-09-07T00:00:00Z,India,IND,NA,local,full and service-based
+2021-09-14T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-20T00:00:00Z,India,IND,NA,local,full network
+2021-09-20T00:00:00Z,Ethiopia,ETH,NA,regional,full network
+2021-09-22T00:00:00Z,Yemen,YEM,NA,local,full network
+2021-09-23T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-26T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-26T00:00:00Z,India,IND,NA,local,full network
+2021-10-03T00:00:00Z,India,IND,NA,local,full network
+2021-10-06T00:00:00Z,India,IND,NA,local,full network
+2021-10-12T00:00:00Z,Yemen,YEM,NA,local,full network
+2021-10-15T00:00:00Z,Eswatini,SWZ,NA,regional,service-based
+2021-10-15T00:00:00Z,Bangladesh,BGD,NA,regional,full network
+2021-10-16T00:00:00Z,India,IND,NA,local,full network
+2021-10-18T00:00:00Z,India,IND,NA,local,full network
+2021-10-20T00:00:00Z,Turkmenistan,TKM,NA,regional,service-based
+2021-10-20T00:00:00Z,India,IND,NA,local,full network
+2021-10-22T00:00:00Z,India,IND,NA,local,full network
+2021-10-24T00:00:00Z,India,IND,NA,local,full network
+2021-10-25T00:00:00Z,India,IND,NA,local,full network
+2021-10-25T00:00:00Z,Sudan,SDN,NA,regional,full and service-based
+2021-10-26T00:00:00Z,India,IND,NA,local,full network
+2021-10-27T00:00:00Z,India,IND,NA,local,full and service-based
+2021-10-28T00:00:00Z,India,IND,NA,local,full network
+2021-10-30T00:00:00Z,India,IND,NA,local,full network
+2021-11-01T00:00:00Z,India,IND,NA,local,full network
+2021-11-03T00:00:00Z,Uzbekistan,UZB,NA,regional,service-based
+2021-11-03T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2021-11-03T00:00:00Z,India,IND,NA,local,full network
+2021-11-05T00:00:00Z,India,IND,NA,local,full network
+2021-11-07T00:00:00Z,India,IND,NA,local,full network
+2021-11-09T00:00:00Z,India,IND,NA,local,full network
+2021-11-11T00:00:00Z,India,IND,NA,local,full network
+2021-11-11T00:00:00Z,India,IND,NA,local,full network
+2021-11-13T00:00:00Z,India,IND,NA,local,full network
+2021-11-13T00:00:00Z,India,IND,NA,local,full network
+2021-11-15T00:00:00Z,India,IND,NA,local,full network
+2021-11-17T00:00:00Z,Sudan,SDN,NA,regional,full network
+2021-11-17T00:00:00Z,India,IND,NA,local,full network
+2021-11-18T00:00:00Z,India,IND,NA,local,full network
+2021-11-19T00:00:00Z,India,IND,NA,local,full network
+2021-11-20T00:00:00Z,India,IND,NA,local,full network
+2021-11-20T00:00:00Z,Burkina Faso,BFA,NA,regional,full network
+2021-11-21T00:00:00Z,India,IND,NA,local,full network
+2021-11-23T00:00:00Z,India,IND,NA,local,full network
+2021-11-24T00:00:00Z,India,IND,NA,local,full network
+2021-11-25T00:00:00Z,India,IND,NA,local,full network
+2021-11-25T00:00:00Z,Turkmenistan,TKM,NA,local,full network
+2021-11-25T00:00:00Z,Iran,IRN,NA,local,full network
+2021-11-27T00:00:00Z,India,IND,NA,local,full network
+2021-11-29T00:00:00Z,India,IND,NA,local,full network
+2021-12-01T00:00:00Z,India,IND,NA,local,full network
+2021-12-01T00:00:00Z,India,IND,NA,local,full network
+2021-12-05T00:00:00Z,India,IND,NA,local,full network
+2021-12-08T00:00:00Z,India,IND,NA,local,full network
+2021-12-08T00:00:00Z,India,IND,NA,local,full network
+2021-12-10T00:00:00Z,India,IND,NA,local,full network
+2021-12-13T00:00:00Z,India,IND,NA,local,full network
+2021-12-16T00:00:00Z,India,IND,NA,local,full network
+2021-12-16T00:00:00Z,India,IND,NA,local,full network
+2021-12-19T00:00:00Z,India,IND,NA,local,full network
+2021-12-22T00:00:00Z,India,IND,NA,local,full network
+2021-12-24T00:00:00Z,India,IND,NA,local,full network
+2021-12-25T00:00:00Z,Sudan,SDN,NA,regional,full network
+2021-12-25T00:00:00Z,India,IND,NA,local,full network
+2021-12-25T00:00:00Z,India,IND,NA,local,full network
+2021-12-25T00:00:00Z,India,IND,NA,local,full network
+2021-12-28T00:00:00Z,India,IND,NA,local,full network
+2021-12-30T00:00:00Z,Sudan,SDN,NA,regional,full network
+2020-11-04T00:00:00Z,Ethiopia,ETH,NA,regional,full network
+2021-01-12T00:00:00Z,Uganda,UGA,NA,regional,service-based
+2021-01-25T00:00:00Z,Iran,IRN,NA,regional,service-based
+2021-03-10T00:00:00Z,Russia,RUS,NA,national,full and service-based
+2021-03-14T00:00:00Z,Oman,OMN,NA,national,service-based
+2021-03-15T00:00:00Z,Jordan,JOR,NA,national,service-based
+2021-03-16T00:00:00Z,China,CHN,NA,regional,service-based
+2021-06-04T00:00:00Z,Nigeria,NGA,NA,national,service-based
+2021-08-20T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-14T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-23T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-09-26T00:00:00Z,Myanmar (Burma),MMR,NA,regional,full network
+2021-10-20T00:00:00Z,Turkmenistan,TKM,NA,national,service-based
+2021-11-03T00:00:00Z,Uzbekistan,UZB,NA,national,service-based
+2021-11-25T00:00:00Z,Tajikistan,TJK,NA,local,full network
+2021-12-31T00:00:00Z,India,IND,NA,local,full network
+2022-01-02T00:00:00Z,Sudan,SDN,NA,national,full network
+2022-01-03T00:00:00Z,India,IND,NA,local,full network
+2022-01-04T00:00:00Z,Kazakhstan,KAZ,NA,national,full and service-based
+2022-01-05T00:00:00Z,India,IND,NA,local,full network
+2022-01-06T00:00:00Z,India,IND,NA,local,full network
+2022-01-06T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2022-01-09T00:00:00Z,India,IND,NA,local,full network
+2022-01-09T00:00:00Z,India,IND,NA,local,full network
+2022-01-10T00:00:00Z,Burkina Faso,BFA,NA,national,full and service-based
+2022-01-12T00:00:00Z,India,IND,NA,local,full network
+2022-01-12T00:00:00Z,India,IND,NA,local,full network
+2022-01-15T00:00:00Z,India,IND,NA,local,full network
+2022-01-18T00:00:00Z,India,IND,NA,local,full network
+2022-01-20T00:00:00Z,Yemen,YEM,NA,national,full network
+2022-01-21T00:00:00Z,India,IND,NA,local,full network
+2022-01-23T00:00:00Z,Burkina Faso,BFA,NA,national,full network
+2022-01-24T00:00:00Z,India,IND,NA,local,full network
+2022-01-26T00:00:00Z,India,IND,NA,local,full network
+2022-01-27T00:00:00Z,India,IND,NA,local,full network
+2022-01-30T00:00:00Z,India,IND,NA,local,full network
+2022-01-30T00:00:00Z,India,IND,NA,local,full network
+2022-02-02T00:00:00Z,India,IND,NA,local,full network
+2022-02-05T00:00:00Z,India,IND,NA,local,full network
+2022-02-07T00:00:00Z,India,IND,NA,local,full network
+2022-02-08T00:00:00Z,India,IND,NA,local,full network
+2022-02-08T00:00:00Z,Turkmenistan,TKM,NA,regional,full network
+2022-02-11T00:00:00Z,India,IND,NA,local,full network
+2022-02-12T00:00:00Z,Myanmar (Burma),MMR,NA,national,full network
+2022-02-14T00:00:00Z,India,IND,NA,local,full network
+2022-02-17T00:00:00Z,India,IND,NA,local,full network
+2022-02-20T00:00:00Z,India,IND,NA,local,full network
+2022-02-20T00:00:00Z,Zimbabwe,ZWE,NA,local,full and service-based
+2022-02-23T00:00:00Z,India,IND,NA,local,full network
+2022-02-25T00:00:00Z,India,IND,NA,local,full network
+2022-02-25T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-02-26T00:00:00Z,Russia,RUS,NA,national,service-based
+2022-02-27T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-01T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-03T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-03T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-07T00:00:00Z,India,IND,NA,local,full network
+2022-03-10T00:00:00Z,India,IND,NA,local,full network
+2022-03-10T00:00:00Z,Ukraine,UKR,NA,national,full network
+2022-03-12T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-16T00:00:00Z,India,IND,NA,local,full network
+2022-03-17T00:00:00Z,Turkmenistan,TKM,NA,local,full network
+2022-03-18T00:00:00Z,Brazil,BRA,NA,national,service-based
+2022-03-23T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-03-28T00:00:00Z,Ukraine,UKR,NA,national,full network
+2022-03-30T00:00:00Z,Tunisia,TUN,NA,national,service-based
+2022-04-01T00:00:00Z,India,IND,NA,local,full network
+2022-04-02T00:00:00Z,India,IND,NA,local,full network
+2022-04-02T00:00:00Z,Sri Lanka,LKA,NA,national,service-based
+2022-04-09T00:00:00Z,India,IND,NA,local,full network
+2022-04-09T00:00:00Z,India,IND,NA,local,full network
+2022-04-10T00:00:00Z,Turkmenistan,TKM,NA,national,full network
+2022-04-12T00:00:00Z,India,IND,NA,local,full network
+2022-04-12T00:00:00Z,India,IND,NA,local,full network
+2022-04-13T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-04-19T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2022-04-21T00:00:00Z,India,IND,NA,local,full network
+2022-04-23T00:00:00Z,India,IND,NA,local,full network
+2022-04-29T00:00:00Z,India,IND,NA,NA,full network
+2022-04-30T00:00:00Z,India,IND,NA,local,full network
+2022-04-30T00:00:00Z,Ukraine,UKR,NA,regional,full network
+2022-05-03T00:00:00Z,India,IND,NA,local,full network
+2022-05-05T00:00:00Z,India,IND,NA,local,full network
+2022-05-06T00:00:00Z,Iran,IRN,NA,local,full network
+2022-05-09T00:00:00Z,Iran,IRN,NA,national,full network
+2022-05-10T00:00:00Z,India,IND,NA,local,full network
+2022-05-11T00:00:00Z,India,IND,NA,local,full network
+2022-05-11T00:00:00Z,India,IND,NA,local,full network
+2022-05-12T00:00:00Z,India,IND,NA,local,full network
+2022-05-15T00:00:00Z,India,IND,NA,local,full network
+2022-05-17T00:00:00Z,Tajikistan,TJK,NA,local,full network
+2022-05-23T00:00:00Z,Myanmar (Burma),MMR,NA,local,full network
+2022-05-25T00:00:00Z,India,IND,NA,local,full network
+2022-05-25T00:00:00Z,India,IND,NA,local,full network
+2022-05-25T00:00:00Z,Pakistan,PAK,NA,regional,full network
+2022-05-26T00:00:00Z,India,IND,NA,local,full network
+2022-05-27T00:00:00Z,India,IND,NA,local,full network
+2022-05-28T00:00:00Z,India,IND,NA,local,full network
+2022-05-30T00:00:00Z,Syria,SYR,NA,national,full network
+2022-05-30T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-05-30T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-06-09T00:00:00Z,India,IND,NA,local,full network
+2022-06-09T00:00:00Z,India,IND,NA,local,full network
+2022-06-10T00:00:00Z,India,IND,NA,local,full network
+2022-06-10T00:00:00Z,India,IND,NA,local,full network
+2022-06-10T00:00:00Z,India,IND,NA,local,full network
+2022-06-10T00:00:00Z,India,IND,NA,local,full network
+2022-06-11T00:00:00Z,India,IND,NA,local,full network
+2022-06-11T00:00:00Z,Sudan,SDN,NA,regional,full network
+2022-06-13T00:00:00Z,Algeria,DZA,NA,national,service-based
+2022-06-13T00:00:00Z,India,IND,NA,local,full network
+2022-06-14T00:00:00Z,India,IND,NA,local,full network
+2022-06-16T00:00:00Z,India,IND,NA,local,full network
+2022-06-16T00:00:00Z,India,IND,NA,local,full network
+2022-06-16T00:00:00Z,India,IND,NA,local,full network
+2022-06-17T00:00:00Z,India,IND,NA,local,full and service-based
+2022-06-17T00:00:00Z,India,IND,NA,local,full network
+2022-06-17T00:00:00Z,India,IND,NA,local,full network
+2022-06-18T00:00:00Z,India,IND,NA,local,full network
+2022-06-26T00:00:00Z,Uzbekistan,UZB,NA,local,full network
+2022-06-27T00:00:00Z,Iraq,IRQ,NA,local,full network
+2022-06-28T00:00:00Z,India,IND,NA,local,full network
+2022-06-30T00:00:00Z,Jordan,JOR,NA,national,service-based
+2022-06-30T00:00:00Z,Sudan,SDN,NA,national,full network
+2022-07-01T00:00:00Z,Libya,LBY,NA,local,full network
+2022-07-04T00:00:00Z,Libya,LBY,NA,local,full network
+2022-07-15T00:00:00Z,Cuba,CUB,NA,national,full network
+2022-07-19T00:00:00Z,India,IND,NA,local,full network
+2022-07-23T00:00:00Z,Ukraine,UKR,NA,regional,service-based
+2022-07-26T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-08-05T00:00:00Z,India,IND,NA,local,full network
+2022-08-06T00:00:00Z,India,IND,NA,local,full network
+2022-08-07T00:00:00Z,Afghanistan,AFG,NA,regional,full network
+2022-08-07T00:00:00Z,India,IND,NA,local,full network
+2022-08-08T00:00:00Z,Libya,LBY,NA,local,full network
+2022-08-10T00:00:00Z,Sierra Leone,SLE,NA,national,full network
+2022-08-11T00:00:00Z,Sierra Leone,SLE,NA,national,full network
+2022-08-11T00:00:00Z,NA,NA,NA,local,full network
+2022-08-14T00:00:00Z,India,IND,NA,local,full network
+2022-08-21T00:00:00Z,India,IND,NA,local,full network
+2022-08-21T00:00:00Z,Libya,LBY,NA,local,full network
+2022-09-09T00:00:00Z,India,IND,NA,local,full network
+2022-09-11T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-09-13T00:00:00Z,Armenia,ARM,NA,regional,service-based
+2022-09-13T00:00:00Z,Azerbaijan,AZE,NA,national,service-based
+2022-09-19T00:00:00Z,Iran,IRN,NA,local,full network
+2022-09-21T00:00:00Z,Iran,IRN,NA,national,service-based
+2022-09-21T00:00:00Z,Iran,IRN,NA,national,full network
+2022-09-30T00:00:00Z,Cuba,CUB,NA,national,full network
+2022-09-30T00:00:00Z,Iran,IRN,NA,local,full network
+2022-10-03T00:00:00Z,India,IND,NA,local,full network
+2022-10-08T00:00:00Z,Iran,IRN,NA,national,full network
+2022-10-08T00:00:00Z,Iran,IRN,NA,local,full network
+2022-10-09T00:00:00Z,Ukraine,UKR,NA,regional,full network
+2022-10-10T00:00:00Z,India,IND,NA,local,full network
+2022-10-11T00:00:00Z,India,IND,NA,local,full network
+2022-10-12T00:00:00Z,Iran,IRN,NA,national,full network
+2022-10-15T00:00:00Z,Iran,IRN,NA,national,full network
+2022-10-16T00:00:00Z,Iran,IRN,NA,local,full network
+2022-10-17T00:00:00Z,Afghanistan,AFG,NA,national,service-based
+2022-10-18T00:00:00Z,Ukraine,UKR,NA,regional,full network
+2022-10-19T00:00:00Z,Kazakhstan,KAZ,NA,national,full and service-based
+2022-10-22T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2022-10-22T00:00:00Z,Ukraine,UKR,NA,local,full network
+2022-10-25T00:00:00Z,Sudan,SDN,NA,national,full network
+2022-10-26T00:00:00Z,Iran,IRN,NA,local,full network
+2022-10-27T00:00:00Z,Iran,IRN,NA,local,full network
+2022-10-28T00:00:00Z,Iran,IRN,NA,local,full network
+2022-11-01T00:00:00Z,India,IND,NA,local,full network
+2022-11-05T00:00:00Z,Bangladesh,BGD,NA,local,full and service-based
+2022-11-12T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2022-11-13T00:00:00Z,India,IND,NA,local,full network
+2022-11-13T00:00:00Z,Turkey,TUR,NA,local,service-based
+2022-11-15T00:00:00Z,Ukraine,UKR,NA,national,full network
+2022-11-21T00:00:00Z,Iran,IRN,NA,national,full network
+2022-11-22T00:00:00Z,India,IND,NA,local,full network
+2022-11-23T00:00:00Z,Ukraine,UKR,NA,national,full network
+2022-11-24T00:00:00Z,India,IND,NA,local,full network
+2022-11-26T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2022-12-03T00:00:00Z,India,IND,NA,local,full network
+2022-12-08T00:00:00Z,Iran,IRN,NA,local,full network
+2022-12-10T00:00:00Z,Bangladesh,BGD,NA,local,full network
+2022-12-11T00:00:00Z,India,IND,NA,local,full network
+2022-12-16T00:00:00Z,Jordan,JOR,NA,national,service-based
+2022-12-16T00:00:00Z,Jordan,JOR,NA,local,full network
+2022-12-16T00:00:00Z,Ukraine,UKR,NA,national,full network
+2022-12-17T00:00:00Z,Iran,IRN,NA,local,full network
