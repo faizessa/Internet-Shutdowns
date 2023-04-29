@@ -57,7 +57,7 @@ districts <- prowess_panel %>%
   distinct()
 
 # creating "blank" panel
-blank_panel <- seq.POSIXt(ISOdate(2016,1,1),ISOdate(2023,1,1), by="week") %>%
+blank_panel <- seq.POSIXt(ISOdate(2016,1,1),ISOdate(2022,1,1), by="week") %>%
   data.frame() %>%
   mutate(year = year(.), week= week(.)) %>%
   select(year, week) %>%
@@ -105,6 +105,18 @@ ShutdownData <- ShutdownDataRaw %>%
 prowess_panel <- prowess_panel %>%
   left_join(ShutdownData, by = c("regddname", "year", "week"), multiple = "all") %>%
   mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
+
+# first shutdown 
+first_shutdown <- prowess_panel %>% 
+  filter(shutdown == 1) %>%
+  group_by(regddname) %>%
+  summarise(time = min(time)) %>%
+  mutate(first_shutdown = 1)
+
+# adding in first shutdown
+prowess_panel <- prowess_panel %>% 
+  left_join(first_shutdown, by = c("regddname", "time")) %>%
+  mutate(first_shutdown = ifelse(is.na(first_shutdown), 0, first_shutdown))
 
 # creating groups for callawa-santa'anna diff-in-diff (first time treated)
 prowess_panel_groups <- prowess_panel %>%

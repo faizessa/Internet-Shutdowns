@@ -147,14 +147,27 @@ gdelt_panel <- gdelt_panel %>%
   left_join(ShutdownData, by = c("year", "week", "ActionGeo_ADM2Code")) %>%
   mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
 
-# creating groups for callawa-santa'anna diff-in-diff (first time treated)
-gdelt_did_groups <- gdelt_panel %>%
+# first shutdown 
+first_shutdown <- gdelt_panel %>% 
   filter(shutdown == 1) %>%
   group_by(ActionGeo_ADM2Code) %>%
-  summarise(group = min(time))
+  summarise(time = min(time)) %>%
+  mutate(first_shutdown = 1)
 
+# adding first_shutdown
 gdelt_panel <- gdelt_panel %>%
-  left_join(gdelt_did_groups, by = "ActionGeo_ADM2Code") %>% 
+  left_join(first_shutdown, by = c("ActionGeo_ADM2Code", "time")) %>%
+  mutate(first_shutdown = ifelse(is.na(first_shutdown), 0, first_shutdown))
+  
+# creating groups for callawa-santa'anna diff-in-diff (first time treated)
+gdelt_did_groups <- gdelt_panel %>%
+  filter(first_shutdown == 1) %>%
+  select(ActionGeo_ADM2Code, time) %>%
+  rename(group = time)
+
+# adding in groups
+gdelt_panel <- gdelt_panel %>%
+  left_join(gdelt_did_groups, by = c("ActionGeo_ADM2Code")) %>% 
   mutate(group = ifelse(is.na(group), 0, group))
 
 write_csv(gdelt_panel, "Data/GDELT/gdelt_panel.csv")
@@ -245,6 +258,18 @@ gdelt_tone_panel <- gdelt_tone_panel %>%
   left_join(ShutdownData2, by = c("year", "week", "Actor1Geo_ADM2Code")) %>%
   mutate(shutdown = ifelse(is.na(shutdown), 0, shutdown))
 
+# first shutdown 
+first_shutdown <- gdelt_tone_panel %>% 
+  filter(shutdown == 1) %>%
+  group_by(Actor1Geo_ADM2Code) %>%
+  summarise(time = min(time)) %>%
+  mutate(first_shutdown = 1)
+
+# adding in first shutdown
+gdelt_tone_panel <- gdelt_tone_panel %>% 
+  left_join(first_shutdown, by = c("Actor1Geo_ADM2Code", "time")) %>%
+  mutate(first_shutdown = ifelse(is.na(first_shutdown), 0, first_shutdown))
+
 # creating groups for callawa-santa'anna diff-in-diff (first time treated)
 gdelt_tone_did_groups <- gdelt_tone_panel %>%
   filter(shutdown == 1) %>%
@@ -254,13 +279,6 @@ gdelt_tone_did_groups <- gdelt_tone_panel %>%
 gdelt_tone_panel <- gdelt_tone_panel %>%
   left_join(gdelt_tone_did_groups, by = "Actor1Geo_ADM2Code") %>% 
   mutate(group = ifelse(is.na(group), 0, group))
-
-# constructing z-score for attitudes towards incumbents
-
-gdelt_tone_panel <- gdelt_tone_panel %>%
-  group_by(Actor1Geo_ADM2Code) %>%
-  mutate(z_score = (GovTone - mean(GovTone))/sd(GovTone)) %>%
-  ungroup()
 
 # saving data
 write_csv(gdelt_tone_panel, "Data/GDELT/gdelt_tone_panel.csv", na = "")
