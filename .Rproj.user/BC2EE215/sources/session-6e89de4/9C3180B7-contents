@@ -65,14 +65,14 @@ for (y in gdelt_depvars){
 
 # plotting logs
 iplot(list(log_protests, log_assaults, log_fights), sep = 0.2, ref.line = -4,
-      xlab = 'Time to treatment',
+      xlab = 'Weeks to first shutdown',
       main = '')
 legend("topright", col = c(1, 2, 3), pch = c(20, 17, 15), 
       legend =  c("ln(Protests+1)", "ln(Assaults+1)", "ln(Fights+1)"))
 
 # plotting raw counts
 iplot(list(protest_count, assault_count, fight_count), sep = 0.2, ref.line = -4,
-      xlab = 'Time to treatment',
+      xlab = 'Weeks to first shutdown',
       main = '')
 legend("topright", col = c(1, 2, 3), pch = c(20, 17, 15), 
        legend =  c("Protests", "Assaults", "Fights"))
@@ -86,7 +86,7 @@ zscore <- feols(zscore ~ i(time_from_sd, ref = -4) |
 
 #### GDELT TONE PLOT ####
 iplot(zscore, sep = 0.2, ref.line = -4,
-      xlab = 'Time to treatment',
+      xlab = 'Weeks to shutdown',
       main = '')
 legend("bottomright", col = 1, pch = 20, 
        legend =  c("Standardized Avg. Tone"))
@@ -120,13 +120,13 @@ for (y in prowess_depvars) {
 #### PROWESS PLOTS ####
 
 iplot(list(AvgBSEPrice, AvgNSEPrice), sep = 0.25, ref.line = -4,
-      xlab = 'Time to treatment',
+      xlab = 'Weeks to first shutdown',
       main = '')
 legend("bottomleft", col = c(1, 2), pch = c(20, 17), 
        legend =  c("Avg. BSE Price", "Avg. NSE Price"))
 
 iplot(list(log_AvgBSEPrice, log_AvgNSEPrice), sep = 0.25, ref.line = -4,
-      xlab = 'Time to treatment',
+      xlab = 'Weeks to first shutdown',
       main = '')
 legend("bottomleft", col = c(1, 2), pch = c(20, 17), 
        legend =  c("ln(Avg. BSE Price)", "ln(Avg. NSE Price)"))

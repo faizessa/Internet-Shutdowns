@@ -180,8 +180,6 @@ start_date,country_name,iso3c,duration,geo_scope,shutdown_extent
 2017-12-31T00:00:00Z,India,IND,1,regional,full network
 2017-12-31T00:00:00Z,India,IND,NA,local,full network
 2017-12-31T00:00:00Z,India,IND,2,local,NA
-2009-01-01T00:00:00Z,Pakistan,PAK,3411,local,NA
-2010-05-01T00:00:00Z,Yemen,YEM,NA,national,service-based
 2018-01-01T00:00:00Z,Ethiopia,ETH,105,regional,NA
 2018-01-02T00:00:00Z,India,IND,7,local,NA
 2018-01-03T00:00:00Z,India,IND,NA,local,full network
