@@ -1,0 +1,135 @@
+# Faiz Essa
+# Event Studies April 29th
+# April 29th, 2023
+
+#### SETUP ####
+
+rm(list=ls())
+
+# importing packages 
+library(tidyverse)
+library(fixest)
+library(readr)
+
+# data import 
+gdelt_panel <- read_csv("Data/GDELT/gdelt_panel.csv")
+gdelt_tone_panel <- read_csv("Data/GDELT/gdelt_tone_panel.csv")
+prowess_panel <- read_csv("Data/Prowess/prowess_panel.csv")
+
+#### DATA WRANGLING ####
+gdelt_panel <- gdelt_panel %>%
+  # time to first shutdown
+  mutate(time_from_sd = ifelse(group == 0, 0, time-group)) %>%
+  # set >= 8 to 8, set <= -8 to -8 
+  mutate(time_from_sd = ifelse(time_from_sd <= -8, -8, time_from_sd),
+         time_from_sd = ifelse(time_from_sd >=8, 8, time_from_sd))
+
+gdelt_tone_panel <- gdelt_tone_panel %>%
+  # time to first shutdown
+  mutate(time_from_sd = ifelse(group == 0, 0, time-group)) %>%
+  # set >= 8 to 8, set <= -8 to -8 
+  mutate(time_from_sd = ifelse(time_from_sd <= -8, -8, time_from_sd),
+         time_from_sd = ifelse(time_from_sd >=8, 8, time_from_sd)) %>%
+  mutate(zscore = scale(AvgGovTone)) 
+
+prowess_panel <- prowess_panel %>%
+  # time to first shutdown
+  mutate(time_from_sd = ifelse(group == 0, 0, time-group)) %>%
+  # set >= 8 to 8, set <= -8 to -8 
+  mutate(time_from_sd = ifelse(time_from_sd <= -8, -8, time_from_sd),
+         time_from_sd = ifelse(time_from_sd >=8, 8, time_from_sd))
+
+#### GDELT EVENT REGRESSIONS ####
+
+# list of dependent vari
+gdelt_depvars <- c("assault_count", "fight_count", "protest_count",
+                   "log_assaults", "log_fights", "log_protests")
+
+# running regressions
+for (y in gdelt_depvars){
+  
+  formula <- as.formula(
+    paste(y, "~i(time_from_sd,ref=-4) | ActionGeo_ADM2Code + time", 
+          sep = ""))
+  
+  model <- feols(formula,
+                 cluster = ~ActionGeo_ADM2Code,
+                 data = gdelt_panel)
+  
+  assign(y, model)
+  
+  rm(formula, model)
+}
+
+#### GDELT EVENT PLOTS ####
+
+# plotting logs
+iplot(list(log_protests, log_assaults, log_fights), sep = 0.2, ref.line = -4,
+      xlab = 'Time to treatment',
+      main = '')
+legend("topright", col = c(1, 2, 3), pch = c(20, 17, 15), 
+      legend =  c("ln(Protests+1)", "ln(Assaults+1)", "ln(Fights+1)"))
+
+# plotting raw counts
+iplot(list(protest_count, assault_count, fight_count), sep = 0.2, ref.line = -4,
+      xlab = 'Time to treatment',
+      main = '')
+legend("topright", col = c(1, 2, 3), pch = c(20, 17, 15), 
+       legend =  c("Protests", "Assaults", "Fights"))
+
+#### GDELT TONE REGRESSION ####
+
+zscore <- feols(zscore ~ i(time_from_sd, ref = -4) |
+                  Actor1Geo_ADM2Code + time,
+                cluster = ~Actor1Geo_ADM2Code,
+                data = gdelt_tone_panel)
+
+#### GDELT TONE PLOT ####
+iplot(zscore, sep = 0.2, ref.line = -4,
+      xlab = 'Time to treatment',
+      main = '')
+legend("bottomright", col = 1, pch = 20, 
+       legend =  c("Standardized Avg. Tone"))
+
+#### PROWESS REGRESSIONS ####
+
+prowess_depvars <- c("AvgBSEPrice", "AvgNSEPrice")
+
+for (y in prowess_depvars) {
+  log <- paste("log(",y,")")
+  
+  formula <- as.formula(
+    paste(y, "~i(time_from_sd,ref=-4) | regddname + time", 
+          sep = ""))
+  log_formula <- as.formula(
+    paste(log, "~i(time_from_sd,ref=-4) | regddname + time", 
+          sep = ""))
+  
+  model <- feols(formula,
+                 cluster = ~regddname,
+                 data = prowess_panel)
+  log_model <- feols(log_formula,
+                     cluster = ~regddname,
+                     data = prowess_panel)
+  
+  log_model_name <- paste("log", y, sep = "_")
+  assign(y, model)
+  assign(log_model_name, log_model)
+}
+
+#### PROWESS PLOTS ####
+
+iplot(list(AvgBSEPrice, AvgNSEPrice), sep = 0.25, ref.line = -4,
+      xlab = 'Time to treatment',
+      main = '')
+legend("bottomleft", col = c(1, 2), pch = c(20, 17), 
+       legend =  c("Avg. BSE Price", "Avg. NSE Price"))
+
+iplot(list(log_AvgBSEPrice, log_AvgNSEPrice), sep = 0.25, ref.line = -4,
+      xlab = 'Time to treatment',
+      main = '')
+legend("bottomleft", col = c(1, 2), pch = c(20, 17), 
+       legend =  c("ln(Avg. BSE Price)", "ln(Avg. NSE Price)"))
+
+
+
