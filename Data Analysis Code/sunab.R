@@ -109,7 +109,7 @@ for (y in prowess_depvars) {
     paste(y, "~sunab(cohort, rel_time, ref.p=-4) | District + Time", 
           sep = ""))
   log_formula <- as.formula(
-    paste(log, "~i(sunab(cohort, rel_time, ref.p=-4) | District + Time", 
+    paste(log, "~sunab(cohort, rel_time, ref.p=-4) | District + Time", 
           sep = ""))
   
   model <- feols(formula,
@@ -157,8 +157,6 @@ test <- etable(assault_count, fight_count, protest_count,
                         zscore = "Tone of Gov. Events",
                         AvgBSEPrice = "BSE Price",
                         AvgNSEPrice = "NSE Price",
-                        log(AvgBSEPrice) = "ln(BSE Price)",
-                        log(AvgNSEPrice) = "ln(NSE Price)",
                         time_from_sd = ""),
                i.equal = "",
                label = "tab:sunab",
